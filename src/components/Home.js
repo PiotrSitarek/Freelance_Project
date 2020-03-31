@@ -4,7 +4,9 @@ import HomeInfoColumns from './HomeInfoColumns';
 import HomeFourSteps from './HomeFourSteps';
 import HomeAboutUs from './HomeAboutUs';
 import HomeContact from './HomeContact';
-import HomeFooter from './HomeFooter'
+import HomeFooter from './HomeFooter';
+import HomeWeHelp from './HomeWeHelp';
+
 
 const Home = () => {
     return (
@@ -13,8 +15,7 @@ const Home = () => {
             <HomeInfoColumns />
             <HomeFourSteps />
             <HomeAboutUs />
-
-            {/* <Paginacja/> */}
+            <HomeWeHelp />
             <HomeContact />
             <HomeFooter />
         </div>

@@ -24,7 +24,7 @@ const HomeHeader = () => {
                             <li>Start</li>
                             <Link to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
                             <Link to="idAboutUs" smooth={true} duration={1000}>O nas</Link>
-                            <li>Fundacja i organizacje</li>
+                            <Link to="idWeHelp" smooth={true} duration={1000}>Fundacja i organizacje</Link>
                             <Link to="idHomeContact" smooth={true} duration={1000}>Kontakt</Link>
                         </ul>
                     </div>
