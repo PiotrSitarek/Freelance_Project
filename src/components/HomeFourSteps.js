@@ -8,7 +8,7 @@ import img4 from '../assets/Icon-4.svg'
 const HomeFourSteps = () => {
     return (
         <>
-            <section className="fourStepsContainer">
+            <section className="fourStepsContainer" id="idFourSteps">
                 <div className="fourStepsInfo">
                     <p>Wystarczą 4 proste kroki</p>
                     <img src={image} />

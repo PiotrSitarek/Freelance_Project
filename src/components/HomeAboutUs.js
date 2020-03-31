@@ -6,7 +6,7 @@ import signature from '../assets/Signature.svg';
 const HomeAboutUs = () => {
     return (
         <>
-            <section className="aboutUsContainer">
+            <section className="aboutUsContainer" id="idAboutUs">
                 <div className="aboutUS">
                     <p>O nas</p>
                     <img src={decoration} />

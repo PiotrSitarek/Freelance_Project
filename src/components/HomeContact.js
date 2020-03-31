@@ -5,7 +5,7 @@ import clothesimage from '../assets/Background-Contact-Form.jpg'
 const HomeContact = () => {
     return (
         <>
-            <section className="contactContainer">
+            <section className="contactContainer" id="idHomeContact">
                 <div className="clothesImgContainer">
                     <img src={clothesimage} />
                 </div>
