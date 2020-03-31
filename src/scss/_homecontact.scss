@@ -1,0 +1,85 @@
+.contactContainer {
+    height: 690px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    .clothesImgContainer {
+        height: 500px;
+        width: 620px;
+        opacity: 0.1;
+    }
+
+    .contactForm {
+        opacity: 1;
+        height: 500px;
+        width: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $text_border_color;
+        position: relative;
+
+        p {
+            font-size: 30px;
+            padding: 10px 0 10px 0;
+        }
+
+        img {
+            padding: 30px 0 50px 0;
+        }
+
+        .nameEmailContainer {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nameContainer {
+                input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: solid 1px $form_text_color;
+                }
+            }
+
+            .emailContainer {
+                input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: solid 1px $form_text_color;
+                }
+            }
+        }
+
+        textarea {
+            width: 95%;
+            height: 60px;
+            background-color: transparent;
+            border: none;
+            border-bottom: solid 1px $form_text_color;
+        }
+
+        button {
+            position: absolute;
+            bottom: 0px;
+            right: 22px;
+            width: 100px;
+            height: 50px;
+            background-color: transparent;
+            border: 0.75px solid $text_border_color;
+            font-size: 18px;
+            color: $form_text_color;
+
+        }
+    }
+
+
+}
+
+.inputStyle {
+    width: 240px;
+}

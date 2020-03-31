@@ -3,6 +3,8 @@ import HomeHeader from "./HomeHeader";
 import HomeInfoColumns from './HomeInfoColumns';
 import HomeFourSteps from './HomeFourSteps';
 import HomeAboutUs from './HomeAboutUs';
+import HomeContact from './HomeContact';
+import HomeFooter from './HomeFooter'
 
 const Home = () => {
     return (
@@ -11,7 +13,10 @@ const Home = () => {
             <HomeInfoColumns />
             <HomeFourSteps />
             <HomeAboutUs />
-            <p>Tutaj wszystkie 8 komponentów</p>
+
+            {/* <Paginacja/> */}
+            <HomeContact />
+            <HomeFooter />
         </div>
 
     );

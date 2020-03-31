@@ -1,0 +1,19 @@
+.footerContainer {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    img:first-of-type {
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+    }
+
+    img:last-of-type {
+        position: absolute;
+        bottom: 20px;
+        right: 80px;
+    }
+}
