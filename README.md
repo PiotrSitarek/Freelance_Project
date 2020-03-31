@@ -1,3 +1,15 @@
+# Info
+This aplication is in progress, creating by Piotr Sitarek. 
+It is my second application in ReactJS technology.
+
+
+## Technologies
+* HTML5
+* Sass
+* ReactJS
+* ...
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
