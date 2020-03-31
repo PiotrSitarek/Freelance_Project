@@ -2,7 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap');
 @import './settings/fonts';
 @import './settings/colors';
-@import './appStyles';
+@import './app';
+@import './home';
+@import './homeheader';
+@import './homeinfocolumns';
+@import './homefoursteps';
+@import './homeaboutus';
+
 
 body {
     font-family: $font-base;

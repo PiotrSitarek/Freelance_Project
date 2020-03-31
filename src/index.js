@@ -4,10 +4,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import style from "./scss/main.scss"
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+ReactDOM.render( <
+  React.StrictMode >
+  <
+  App / >
+  <
+  /React.StrictMode>,
   document.getElementById('root')
 );
 
