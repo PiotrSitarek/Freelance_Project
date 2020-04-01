@@ -2,12 +2,25 @@ import React from "react";
 import { Link } from 'react-scroll';
 import image from '../assets/Home-Hero-Image-2.jpg';
 import pageInfoimage from '../assets/Decoration.svg';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link as RouterLink,
+    useHistory
+} from "react-router-dom";
 
 
 
 
 
 const HomeHeader = () => {
+    const history = useHistory()
+
+    const toLoginPage = () => {
+        history.push("/LoginPage")
+    }
+
     return (
         <>
             <section className="heroImageContainer">
@@ -36,8 +49,8 @@ const HomeHeader = () => {
                         <img src={pageInfoimage} />
                     </div>
                     <div className="pageInfoOptions">
-                        <button>Oddaj rzeczy</button>
-                        <button>Zorganizuj zbiórkę</button>
+                        <button onClick={toLoginPage}>Oddaj rzeczy</button>
+                        <button onClick={toLoginPage}>Zorganizuj zbiórkę</button>
 
                     </div>
                 </div>

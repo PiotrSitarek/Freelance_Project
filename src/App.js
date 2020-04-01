@@ -1,6 +1,7 @@
 import React from 'react';
-import Home from './components/Home'
-import PageNotFound from './components/PageNotFound'
+import Home from './components/Home';
+import PageNotFound from './components/PageNotFound';
+import LoginPage from './components/LoginPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/' component={Home} />
           {/* <Route path='/LogIn' component={LogIn}/> 
           <Route path='/Register' component={Register}/> buttony Zaloguj i załóż konto */}
+          <Route path='/LoginPage' component={LoginPage} />
 
           <Route component={PageNotFound} />
         </Switch>

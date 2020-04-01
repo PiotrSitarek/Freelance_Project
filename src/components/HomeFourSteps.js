@@ -3,9 +3,22 @@ import image from "../assets/Decoration.svg";
 import img1 from '../assets/Icon-1.svg';
 import img2 from '../assets/Icon-2.svg';
 import img3 from '../assets/Icon-3.svg';
-import img4 from '../assets/Icon-4.svg'
+import img4 from '../assets/Icon-4.svg';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link as RouterLink,
+    useHistory
+} from "react-router-dom";
 
 const HomeFourSteps = () => {
+
+    const history = useHistory()
+
+    const toLoginPage = () => {
+        history.push("/LoginPage")
+    }
     return (
         <>
             <section className="fourStepsContainer" id="idFourSteps">
@@ -36,7 +49,7 @@ const HomeFourSteps = () => {
                     </div>
                 </div>
                 <div className="giveButtonContainer">
-                    <button>Oddaj rzeczy</button>
+                    <button onClick={toLoginPage}>Oddaj rzeczy</button>
                 </div>
 
             </section>
