@@ -9,7 +9,7 @@ import {
     useHistory
 } from "react-router-dom";
 
-const LoginPage = () => {
+const RegistrationPage = () => {
     const history = useHistory()
     const toLoginPage = () => {
         history.push("/LoginPage")
@@ -20,10 +20,6 @@ const LoginPage = () => {
     const toHomeComponent = () => {
         history.push("/")
     }
-
-
-
-
 
     return (
 
@@ -44,7 +40,7 @@ const LoginPage = () => {
                 </div>
             </div>
             <div className="loginDataContainer">
-                <p>Zaloguj się</p>
+                <p>Zarejestruj się</p>
                 <img src={image} />
                 <div>
                     <form>
@@ -55,12 +51,15 @@ const LoginPage = () => {
                         <label>Hasło  </label>
                         <input type="password" />
 
+                        <label>Powtórz hasło </label>
+                        <input type="password" />
+
                     </form>
                 </div>
 
-
-                <button onClick={toRegistrationPage}>Załóż konto</button>
                 <button onClick={toLoginPage}>Zaloguj się</button>
+                <button onClick={toRegistrationPage}>Załóż konto</button>
+
 
             </div>
 
@@ -72,4 +71,4 @@ const LoginPage = () => {
     );
 }
 
-export default LoginPage;
+export default RegistrationPage;

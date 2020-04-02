@@ -12,7 +12,7 @@ const HomeWeHelp = () => {
     // // json-server --watch database.json
 
     useEffect(() => {
-        fetch("http://localhost:3000/database")
+        fetch(`http://localhost:3000/database`)
             .then((response) => response.json())
             .then((response) => setPosts(response))
 

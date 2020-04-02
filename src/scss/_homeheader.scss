@@ -47,14 +47,16 @@
                 justify-content: space-between;
                 align-items: center;
 
-                li {
+                .menuHoverElement {
                     font-size: 18px;
                     padding: 9px 9px 9px 9px;
                 }
 
-                li:hover {
+                .menuHoverElement:hover {
                     border: 0.75px solid $text_border_color;
+
                 }
+
             }
         }
     }

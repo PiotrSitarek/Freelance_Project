@@ -10,16 +10,19 @@ import {
     useHistory
 } from "react-router-dom";
 
-
-
-
-
 const HomeHeader = () => {
     const history = useHistory()
 
     const toLoginPage = () => {
         history.push("/LoginPage")
     }
+    const toRegistrationPage = () => {
+        history.push("/RegistrationPage")
+    }
+    const toHomeComponent = () => {
+        history.push("/")
+    }
+
 
     return (
         <>
@@ -29,16 +32,16 @@ const HomeHeader = () => {
             <section className="navigationContainer">
                 <div className="menuLoginContainer">
                     <div className="loginContainer">
-                        <button>Zaloguj się</button>
-                        <button>Załóż konto</button>
+                        <button onClick={toLoginPage}>Zaloguj się</button>
+                        <button onClick={toRegistrationPage}>Załóż konto</button>
                     </div>
                     <div className="menuContainer">
                         <ul>
-                            <li>Start</li>
-                            <Link to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
-                            <Link to="idAboutUs" smooth={true} duration={1000}>O nas</Link>
-                            <Link to="idWeHelp" smooth={true} duration={1000}>Fundacja i organizacje</Link>
-                            <Link to="idHomeContact" smooth={true} duration={1000}>Kontakt</Link>
+                            <li onClick={toHomeComponent} className="menuHoverElement">Start</li>
+                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
+                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idAboutUs" smooth={true} duration={1000}>O nas</Link>
+                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idWeHelp" smooth={true} duration={1000}>Fundacja i organizacje</Link>
+                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idHomeContact" smooth={true} duration={1000}>Kontakt</Link>
                         </ul>
                     </div>
                 </div>

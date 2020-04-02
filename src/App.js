@@ -2,6 +2,8 @@ import React from 'react';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import LoginPage from './components/LoginPage';
+import RegistrationPage from './components/RegistrationPage';
+import LogoutPage from './components/LogoutPage';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,10 +17,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path='/' component={Home} />
-          {/* <Route path='/LogIn' component={LogIn}/> 
-          <Route path='/Register' component={Register}/> buttony Zaloguj i załóż konto */}
           <Route path='/LoginPage' component={LoginPage} />
-
+          <Route path='/RegistrationPage' component={RegistrationPage} />
+          <Route path='/LogoutPage' component={LogoutPage} />
           <Route component={PageNotFound} />
         </Switch>
       </Router>

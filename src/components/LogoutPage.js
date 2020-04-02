@@ -9,7 +9,7 @@ import {
     useHistory
 } from "react-router-dom";
 
-const LoginPage = () => {
+const LogoutPage = () => {
     const history = useHistory()
     const toLoginPage = () => {
         history.push("/LoginPage")
@@ -20,10 +20,6 @@ const LoginPage = () => {
     const toHomeComponent = () => {
         history.push("/")
     }
-
-
-
-
 
     return (
 
@@ -43,33 +39,14 @@ const LoginPage = () => {
                     </ul>
                 </div>
             </div>
-            <div className="loginDataContainer">
-                <p>Zaloguj się</p>
+            <div className="logoutDataContainer">
+                <p>Nastąpiło pomyślne wylogowanie</p>
                 <img src={image} />
-                <div>
-                    <form>
-                        <label>Email  </label>
-
-                        <input type="email" />
-
-                        <label>Hasło  </label>
-                        <input type="password" />
-
-                    </form>
-                </div>
-
-
-                <button onClick={toRegistrationPage}>Załóż konto</button>
-                <button onClick={toLoginPage}>Zaloguj się</button>
-
+                <button onClick={toHomeComponent}>Strona główna</button>
             </div>
-
-
-
-
         </section>
         </>
     );
 }
 
-export default LoginPage;
+export default LogoutPage;
