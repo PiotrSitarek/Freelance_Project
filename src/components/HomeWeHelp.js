@@ -22,12 +22,14 @@ const HomeWeHelp = () => {
         const filtered = posts.filter(function (element, index, arr) {
             return element.type === "Fundacja"
         })
+        setCurrentPage(1);
         setListToPagination(filtered);
     }
     const searchbyOrganization = () => {
         const filtered2 = posts.filter(function (element, index, arr) {
             return element.type === "Organizacja"
         })
+        setCurrentPage(1);
         setListToPagination(filtered2);
 
     }
@@ -35,6 +37,7 @@ const HomeWeHelp = () => {
         const filtered3 = posts.filter(function (element, index, arr) {
             return element.type === "Zbiorka"
         })
+        setCurrentPage(1);
         setListToPagination(filtered3);
     }
 
@@ -43,13 +46,18 @@ const HomeWeHelp = () => {
     const indexOfFirstPost = indexOfLastPost - postPerPage;
     const currentPosts = listToPagination.slice(indexOfFirstPost, indexOfLastPost)
 
-    const pageNumbers = [];
+    let pageNumbers = [];
     const totalPosts = listToPagination.length;
     for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
         pageNumbers.push(i);
+    } if (pageNumbers < 2) {
+        pageNumbers = []
     }
 
-    const paginate = (pageNumber) => { setCurrentPage(pageNumber) }
+    const paginate = (pageNumber) => {
+        setCurrentPage(pageNumber)
+
+    }
 
 
     return (
