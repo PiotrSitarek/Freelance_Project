@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-scroll';
 import image from "../assets/Decoration.svg";
 import {
@@ -11,6 +11,10 @@ import {
 
 const RegistrationPage = () => {
     const history = useHistory()
+    const [password1, setPassword1] = useState('');
+    const [password2, setPassword2] = useState('');
+    const [registeredEmail, setRegisteredEmail] = useState('');
+
     const toLoginPage = () => {
         history.push("/LoginPage")
     }
@@ -20,6 +24,19 @@ const RegistrationPage = () => {
     const toHomeComponent = () => {
         history.push("/")
     }
+    const registrationForm = document.querySelector('#registrationFormReset');
+    const checkLoginData = (event) => {
+        event.preventDefault();
+        if (password1 == password2) {
+            alert(`Hasła są zgodne,  email to ${registeredEmail} ale nie bardzo jest gdzie się logować`);  // tymczasowo alert
+            registrationForm.reset();
+        } else {
+            alert(`${registeredEmail} to fajny mail ale hasła nie pasują! `);  // tymczasowo alert
+        }
+    }
+
+
+
 
     return (
 
@@ -43,22 +60,23 @@ const RegistrationPage = () => {
                 <p>Zarejestruj się</p>
                 <img src={image} />
                 <div>
-                    <form>
+                    <form onSubmit={checkLoginData} id="registrationFormReset">
                         <label>Email  </label>
 
-                        <input type="email" />
+                        <input onChange={event => setRegisteredEmail(event.target.value)} type="email" />
 
                         <label>Hasło  </label>
-                        <input type="password" />
+                        <input onChange={event => setPassword1(event.target.value)} id="password1" type="password" />
 
                         <label>Powtórz hasło </label>
-                        <input type="password" />
-
+                        <input onChange={event => setPassword2(event.target.value)} id="password2" type="password" />
+                        <button onClick={toLoginPage}>Zaloguj się</button>
+                        <button >Załóż konto</button>
                     </form>
                 </div>
 
-                <button onClick={toLoginPage}>Zaloguj się</button>
-                <button onClick={toRegistrationPage}>Załóż konto</button>
+
+
 
 
             </div>

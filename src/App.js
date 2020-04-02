@@ -11,6 +11,8 @@ import {
   Link
 } from "react-router-dom";
 
+// // json-server --watch database.json
+
 function App() {
   return (
     <>

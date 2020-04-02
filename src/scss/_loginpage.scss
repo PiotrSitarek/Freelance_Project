@@ -96,6 +96,11 @@
                     padding: 10px 0 10px 0;
                 }
 
+                .infoFromLoginPage {
+                    font-size: 10px;
+                    color: red;
+                }
+
             }
         }
 
@@ -123,4 +128,9 @@
             right: 0;
         }
 
+    }
+
+    .infoFromLoginPage {
+        font-size: 5px;
+        color: $form_text_color;
     }
