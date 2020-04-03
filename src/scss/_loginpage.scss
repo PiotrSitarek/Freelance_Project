@@ -25,6 +25,7 @@
 
             button:hover {
                 border: 0.75px solid $orange_color;
+                cursor: crosshair;
             }
         }
 
@@ -45,6 +46,7 @@
 
                 .menuHoverElement:hover {
                     border: 0.75px solid $text_border_color;
+                    cursor: crosshair;
 
                 }
 
@@ -119,6 +121,7 @@
 
     button:hover {
         border: 0.75px solid $form_text_color;
+        cursor: crosshair;
     }
 
     button:first-of-type {

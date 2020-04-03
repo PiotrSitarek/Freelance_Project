@@ -89,6 +89,11 @@
             color: $form_text_color;
 
         }
+
+        button:hover {
+            color: $orange_color;
+            cursor: crosshair;
+        }
     }
 
 
