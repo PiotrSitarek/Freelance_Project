@@ -1,7 +1,13 @@
 .heroImageContainer {
+    width: 722px;
+    display: flex;
+    justify-content: flex-start;
+
+
     img {
         position: absolute;
-        left: -250px;
+        right: 600px;
+
     }
 }
 
@@ -9,105 +15,112 @@
     width: 100%;
     height: 722px;
 
+    .navigationFlexContainer {
+        display: flex;
+        justify-content: flex-end;
 
-    .menuLoginContainer {
-        position: absolute;
-        top: 37px;
-        left: 850px;
-        width: 650px;
-        height: 95px;
+        .menuLoginContainer {
+            position: absolute;
+            top: 37px;
+            width: 650px;
+            height: 95px;
 
-        .loginContainer {
-            width: 100%;
-            height: 53px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-            button {
-                height: 30px;
-                padding: 5px 5px 5px 5px;
-                background: transparent;
-                border: none;
-            }
-
-            button:hover {
-                border: 0.75px solid $orange_color;
-            }
-        }
-
-        .menuContainer {
-            top: 90px;
-            left: 1075px;
-            width: 100%;
-
-            ul {
-                height: 42px;
+            .loginContainer {
+                width: 100%;
+                height: 53px;
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end;
                 align-items: center;
 
-                .menuHoverElement {
-                    font-size: 18px;
-                    padding: 9px 9px 9px 9px;
+                button {
+                    height: 30px;
+                    padding: 5px 5px 5px 5px;
+                    background: transparent;
+                    border: none;
                 }
 
-                .menuHoverElement:hover {
+                button:hover {
+                    border: 0.75px solid $orange_color;
+                }
+            }
+
+            .menuContainer {
+                top: 90px;
+                width: 100%;
+
+                ul {
+                    height: 42px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .menuHoverElement {
+                        font-size: 18px;
+                        padding: 9px 9px 9px 9px;
+                    }
+
+                    .menuHoverElement:hover {
+                        border: 0.75px solid $text_border_color;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+    .pageInfoFlex {
+        display: flex;
+        justify-content: flex-end;
+
+        .pageInfoContainer {
+            position: absolute;
+            top: 250px;
+            // right: 100px;
+            width: 600px;
+            height: 350px;
+
+
+            .pageInfoText {
+                height: 165px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    font-size: 30px;
+                    color: $text_border_color;
+                    padding-bottom: 20px;
+                }
+
+                img {
+                    margin-top: 25px;
+                }
+            }
+
+            .pageInfoOptions {
+                height: 185px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-end;
+
+                button {
+                    width: 240px;
+                    height: 100px;
+                    background-color: transparent;
+                    font-size: 30px;
+                    color: $form_text_color;
                     border: 0.75px solid $text_border_color;
 
                 }
 
+                button:hover {
+                    border: 0.75px solid $orange_color; // tutaj do zmiany/wyrzucenia
+                }
+
             }
         }
+
     }
-
-    .pageInfoContainer {
-        position: absolute;
-        top: 250px;
-        left: 800px;
-        width: 600px;
-        height: 350px;
-
-
-        .pageInfoText {
-            height: 165px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            p {
-                font-size: 30px;
-                color: $text_border_color;
-                padding-bottom: 20px;
-            }
-
-            img {
-                margin-top: 25px;
-            }
-        }
-
-        .pageInfoOptions {
-            height: 185px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-end;
-
-            button {
-                width: 240px;
-                height: 100px;
-                background-color: transparent;
-                font-size: 30px;
-                color: $form_text_color;
-                border: 0.75px solid $text_border_color;
-
-            }
-
-            button:hover {
-                border: 0.75px solid $orange_color; // tutaj do zmiany/wyrzucenia
-            }
-
-        }
-    }
-
 }

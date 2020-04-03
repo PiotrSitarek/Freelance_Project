@@ -1,7 +1,11 @@
+.navigationFlexContainer {
+    display: flex;
+    justify-content: flex-end;
+
     .menuLoginContainer {
         position: absolute;
         top: 37px;
-        left: 850px;
+        // right: 70px;
         width: 650px;
         height: 95px;
 
@@ -26,7 +30,6 @@
 
         .menuContainer {
             top: 90px;
-            left: 1075px;
             width: 100%;
 
             ul {
@@ -48,89 +51,92 @@
             }
         }
     }
+}
 
-    .loginDataContainer {
-        position: absolute;
-        top: 100px;
-        left: 600px;
+.loginDataContainer {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 100px;
+    right: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    p {
+        padding-top: 40px;
+        font-size: 22px;
+    }
+
+    img {
+        padding: 20px 0 20px 0;
+    }
+
+    div {
+        width: 100%;
+        height: 150px;
+        background: lightgray;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 300px;
-        height: 400px;
 
-        p {
-            padding-top: 40px;
-            font-size: 22px;
-        }
-
-        img {
-            padding: 20px 0 20px 0;
-        }
-
-        div {
-            width: 100%;
-            height: 150px;
-            background: lightgray;
+        form {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
 
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                input {
-                    background-color: transparent;
-                    border: none;
-                    border-bottom: 1px solid $form_text_color;
-
-                }
-
-                label {
-                    font-weight: bold;
-                    padding: 10px 0 10px 0;
-                }
-
-                .infoFromLoginPage {
-                    font-size: 10px;
-                    color: red;
-                }
+            input {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $form_text_color;
 
             }
-        }
 
-        button {
-            height: 30px;
-            width: 90px;
-            background-color: transparent;
-            border: none;
+            label {
+                font-weight: bold;
+                padding: 10px 0 10px 0;
+            }
+
+            .infoFromLoginPage {
+                font-size: 10px;
+                color: red;
+            }
 
         }
+    }
 
-        button:hover {
-            border: 0.75px solid $form_text_color;
-        }
-
-        button:first-of-type {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-
-        button:last-of-type {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+    button {
+        height: 30px;
+        width: 90px;
+        background-color: transparent;
+        border: none;
 
     }
 
-    .infoFromLoginPage {
-        font-size: 5px;
-        color: $form_text_color;
+    button:hover {
+        border: 0.75px solid $form_text_color;
     }
+
+    button:first-of-type {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    button:last-of-type {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+}
+
+
+.infoFromLoginPage {
+    font-size: 5px;
+    color: $form_text_color;
+}

@@ -7,7 +7,7 @@ It is my second application in ReactJS technology.
 * HTML5
 * Sass
 * ReactJS
-* ...
+* JSON Server
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

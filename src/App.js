@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import GiveClothes from './components/GiveClothes';
 
 // // json-server --watch database.json
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/LoginPage' component={LoginPage} />
           <Route path='/RegistrationPage' component={RegistrationPage} />
           <Route path='/LogoutPage' component={LogoutPage} />
+          <Route path='/GiveClothes' component={GiveClothes} />
           <Route component={PageNotFound} />
         </Switch>
       </Router>

@@ -45,6 +45,8 @@ const HomeContact = () => {
         }
         const formReset = document.querySelector('#contactFormReset')
 
+
+        // fetch(`  http://localhost:3000/database/`, {
         fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact/`, {
             method: 'POST',
             headers: {

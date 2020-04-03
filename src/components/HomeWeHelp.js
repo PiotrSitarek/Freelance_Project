@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import decoration from '../assets/Decoration.svg';
 
+
 const HomeWeHelp = () => {
 
     const [posts, setPosts] = useState([]);
@@ -17,6 +18,8 @@ const HomeWeHelp = () => {
             .then((response) => setPosts(response))
 
     }, [])
+
+
 
     const searchbyFundation = () => {
         const filtered = posts.filter(function (element, index, arr) {

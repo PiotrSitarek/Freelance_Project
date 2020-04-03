@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-scroll';
-import image from "../assets/Decoration.svg";
 import {
     BrowserRouter as Router,
     Switch,
@@ -9,7 +8,7 @@ import {
     useHistory
 } from "react-router-dom";
 
-const LogoutPage = () => {
+const GiveClothes = () => {
     const history = useHistory()
     const toLoginPage = () => {
         history.push("/LoginPage")
@@ -22,8 +21,7 @@ const LogoutPage = () => {
     }
 
     return (
-
-        <><section>
+        <>
             <div className="navigationFlexContainer">
                 <div className="menuLoginContainer">
                     <div className="loginContainer">
@@ -41,14 +39,12 @@ const LogoutPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="logoutDataContainer">
-                <p>Nastąpiło pomyślne wylogowanie</p>
-                <img src={image} />
-                <button onClick={toHomeComponent}>Strona główna</button>
-            </div>
-        </section>
-        </>
-    );
-}
+            <h1 className="oddaj">oddaj ubrania</h1>
 
-export default LogoutPage;
+
+
+
+        </>
+    )
+}
+export default GiveClothes;

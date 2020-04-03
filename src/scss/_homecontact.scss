@@ -9,6 +9,13 @@
         height: 500px;
         width: 620px;
         opacity: 0.1;
+        display: flex;
+        justify-content: center;
+
+        img {
+            position: absolute;
+            right: 300px;
+        }
     }
 
     .contactForm {
