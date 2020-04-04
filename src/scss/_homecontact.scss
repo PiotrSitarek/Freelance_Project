@@ -2,26 +2,17 @@
     height: 690px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-evenly;
 
-    .clothesImgContainer {
-        height: 500px;
-        width: 620px;
+    img {
         opacity: 0.1;
-        display: flex;
-        justify-content: center;
-
-        img {
-            position: absolute;
-            right: 300px;
-        }
     }
 
     .contactForm {
+        margin-right: 7rem;
         opacity: 1;
         height: 500px;
-        width: 520px;
+        width: 550px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -35,6 +26,7 @@
         }
 
         img {
+            opacity: 1;
             padding: 30px 0 30px 0;
         }
 
@@ -58,6 +50,7 @@
                     border: none;
                     border-bottom: solid 1px $form_text_color;
                 }
+
             }
 
             .emailContainer {
@@ -79,15 +72,14 @@
 
         button {
             position: absolute;
-            bottom: 0px;
-            right: 22px;
+            bottom: 0;
+            right: 0;
             width: 100px;
             height: 50px;
             background-color: transparent;
             border: 0.75px solid $text_border_color;
             font-size: 18px;
             color: $form_text_color;
-
         }
 
         button:hover {
@@ -95,13 +87,8 @@
             cursor: crosshair;
         }
     }
-
-
 }
 
-.inputStyle {
-    width: 240px;
-}
 
 .errorStyle {
     color: red;

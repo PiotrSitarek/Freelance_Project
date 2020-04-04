@@ -66,9 +66,9 @@ const HomeContact = () => {
     return (
         <>
             <section className="contactContainer" id="idHomeContact">
-                <div className="clothesImgContainer">
-                    <img src={clothesimage} />
-                </div>
+
+                <img src={clothesimage} />
+
                 <div className="contactForm">
                     <p className="contactUs">Skontaktuj się z nami</p>
                     <img src={image} />
