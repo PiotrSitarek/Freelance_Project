@@ -24,23 +24,42 @@ const RegistrationPage = () => {
     const toHomeComponent = () => {
         history.push("/")
     }
+
     const registrationForm = document.querySelector('#registrationFormReset');
     const checkLoginData = (event) => {
         event.preventDefault();
         if (password1.length < 6 || password2.length < 6) {
-            alert(`Nieprawidłowe hasło`);
+            alert(`Hasło jest za krótkie`);
+            return;
+
+        } if (password1 != password2) {
+            alert(`Hasła nie są zgodne`);  // tymczasowo alert
             return;
         }
         if (password1 == password2) {
-            alert(`Hasła są zgodne`);  // tymczasowo alert
-            registrationForm.reset();
-            history.push("/LoginPage")
-            return;
-        } else {
-            alert(`${registeredEmail} to fajny mail ale hasła nie pasują! `);  // tymczasowo alert
-            return;
-        }
 
+            const registrationData = {
+                "userEmail": `${registeredEmail}`,
+                "userPassword": `${password1}`,
+                "userConfirmPassword": `${password2}`
+            }
+            fetch(`  http://localhost:3000/database/`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": 'application/json'
+                },
+                body: JSON.stringify(registrationData)
+            })
+                .then(response => console.log(response))
+                .then(alert(`Konto zostało utworzone`))// tymczasowo alert
+                .then(registrationForm.reset())
+                .then(history.push("/LoginPage"))
+                ;
+
+
+
+
+        }
     }
 
 

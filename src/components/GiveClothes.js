@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-scroll';
 import HomeContact from './HomeContact';
 import image from '../assets/Form-Hero-Image.jpg';
 import GiveClothesImportant from './GiveClothesImportant';
 import HomeFooter from './HomeFooter';
 import decoration from '../assets/Decoration.svg';
+import AccountContext from './LoginPage';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,6 +14,7 @@ import {
     useHistory
 } from "react-router-dom";
 import GiveClothesForm from './GiveClothesForm';
+
 
 
 const GiveClothes = () => {
@@ -27,6 +29,10 @@ const GiveClothes = () => {
         history.push("/")
     }
 
+    const contextType = useContext(AccountContext);
+
+
+
     return (
         <>
             <section className="giveClothesComponent">
@@ -35,6 +41,9 @@ const GiveClothes = () => {
                     <div className="navigationFlexContainer">
                         <div className="menuLoginContainer">
                             <div className="loginContainer">
+                                <p>
+                                    {contextType}
+                                </p>
                                 <button id="giveClothesStaticButton">Oddaj rzeczy</button>
                                 <button onClick={toLogoutPage}>Wyloguj się</button>
                             </div>
