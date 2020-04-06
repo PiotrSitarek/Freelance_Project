@@ -16,9 +16,20 @@ const HomeFourSteps = () => {
 
     const history = useHistory()
 
-    const toLoginPage = () => {
-        history.push("/LoginPage")
+    const toGiveClothes = () => {
+
+        if (localStorage.getItem("savedName") === null) {
+
+            history.push("/LoginPage")
+        } else {
+            history.push("/GiveClothes")
+
+        }
     }
+
+
+
+
     return (
         <>
             <section className="fourStepsContainer" id="idFourSteps">
@@ -49,7 +60,7 @@ const HomeFourSteps = () => {
                     </div>
                 </div>
                 <div className="giveButtonContainer">
-                    <button onClick={toLoginPage}>Oddaj rzeczy</button>
+                    <button onClick={toGiveClothes}>Oddaj rzeczy</button>
                 </div>
 
             </section>

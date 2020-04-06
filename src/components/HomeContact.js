@@ -17,6 +17,7 @@ const HomeContact = () => {
     const sendForm = (event) => {
         event.preventDefault();
         //walidacja pól formularza
+
         if (userName.length == 0 || userEmail == 0 || userMessage == 0) {
             setAllInputsError('Wszyskie pola muszą być wypełnione');
             return;
@@ -44,7 +45,7 @@ const HomeContact = () => {
             "message": `${userMessage}`
         }
         const formReset = document.querySelector('#contactFormReset')
-
+        console.log(formReset)
 
         // fetch(`  http://localhost:3000/database/`, {
         fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact/`, {
@@ -83,7 +84,7 @@ const HomeContact = () => {
                             </div>
                             <div className="emailContainer">
                                 <label>Wpisz swój e-mail</label>
-                                <input onChange={event => setUserEmail(event.target.value)} className="inputStyle" type="text" placeholder="e-mail..."></input>
+                                <input id="emailInputInject" onChange={event => setUserEmail(event.target.value)} className="inputStyle" type="text" placeholder="e-mail..."></input>
                                 {emailError && <p className="errorStyle">{emailError}</p>}
                             </div>
                         </div>

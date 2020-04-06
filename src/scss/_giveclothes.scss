@@ -11,6 +11,14 @@
         display: flex;
         justify-content: space-between;
 
+
+
+        .userMailStyleLocal {
+
+            font-size: 13px;
+            padding-right: 10px;
+        }
+
         #giveClothesStaticButton {
             font-weight: bold;
             border: 0.75px solid $orange_color;

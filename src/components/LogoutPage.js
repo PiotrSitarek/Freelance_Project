@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-scroll';
 import image from "../assets/Decoration.svg";
 import {
     BrowserRouter as Router,
@@ -10,6 +9,7 @@ import {
 } from "react-router-dom";
 
 const LogoutPage = () => {
+
     const history = useHistory()
     const toLoginPage = () => {
         history.push("/LoginPage")
@@ -32,11 +32,11 @@ const LogoutPage = () => {
                     </div>
                     <div className="menuContainer">
                         <ul>
-                            <li onClick={toHomeComponent} className="menuHoverElement">Start</li>
-                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
-                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idAboutUs" smooth={true} duration={1000}>O nas</Link>
-                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idWeHelp" smooth={true} duration={1000}>Fundacja i organizacje</Link>
-                            <Link onClick={toHomeComponent} className="menuHoverElement" to="idHomeContact" smooth={true} duration={1000}>Kontakt</Link>
+                            <RouterLink to="/" className="menuHoverElement">Start</RouterLink>
+                            <RouterLink to="/" className="menuHoverElement">O co chodzi?</RouterLink>
+                            <RouterLink to="/" className="menuHoverElement">O nas</RouterLink>
+                            <RouterLink to="/" className="menuHoverElement">Fundacja i organizacje</RouterLink>
+                            <RouterLink to="/" className="menuHoverElement">Kontakt</RouterLink>
                         </ul>
                     </div>
                 </div>

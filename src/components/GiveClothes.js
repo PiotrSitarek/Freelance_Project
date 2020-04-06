@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { Link } from 'react-scroll';
+
 import HomeContact from './HomeContact';
 import image from '../assets/Form-Hero-Image.jpg';
 import GiveClothesImportant from './GiveClothesImportant';
 import HomeFooter from './HomeFooter';
 import decoration from '../assets/Decoration.svg';
-import AccountContext from './LoginPage';
 import {
     BrowserRouter as Router,
     Switch,
@@ -14,46 +13,54 @@ import {
     useHistory
 } from "react-router-dom";
 import GiveClothesForm from './GiveClothesForm';
+import { UserContext } from './UserContext';
 
 
 
 const GiveClothes = () => {
     const history = useHistory()
-    const toLoginPage = () => {
-        history.push("/LoginPage")
-    }
-    const toLogoutPage = () => {
-        history.push("/LogoutPage")
-    }
-    const toHomeComponent = () => {
+    // const toLoginPage = () => {
+    //     history.push("/LoginPage")
+    // }
+
+    if (localStorage.getItem("savedName") === null) {
+
         history.push("/")
     }
 
-    const contextType = useContext(AccountContext);
+    const toLogoutPage = () => {
+        localStorage.removeItem('savedName');
+        history.push("/LogoutPage")
+    }
+    // const toHomeComponent = () => {
+    //     history.push("/")
+    // }
+    const { value, setValue } = useContext(UserContext);
+    console.log(value)
 
+    var savedData = localStorage.getItem("savedName");
+    console.log("Masz na imię: ", savedData);
 
 
     return (
         <>
             <section className="giveClothesComponent">
                 <section className="imgNaviContainer">
-                    <img src={image} />
+                    <img src={image} alt="GiveClothesImg" />
                     <div className="navigationFlexContainer">
                         <div className="menuLoginContainer">
                             <div className="loginContainer">
-                                <p>
-                                    {contextType}
-                                </p>
+                                <p className="userMailStyleLocal"> {savedData}</p>
                                 <button id="giveClothesStaticButton">Oddaj rzeczy</button>
                                 <button onClick={toLogoutPage}>Wyloguj się</button>
                             </div>
                             <div className="menuContainer">
                                 <ul>
-                                    <li onClick={toHomeComponent} className="menuHoverElement">Start</li>
-                                    <Link onClick={toHomeComponent} className="menuHoverElement" to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
-                                    <Link onClick={toHomeComponent} className="menuHoverElement" to="idAboutUs" smooth={true} duration={1000}>O nas</Link>
-                                    <Link onClick={toHomeComponent} className="menuHoverElement" to="idWeHelp" smooth={true} duration={1000}>Fundacja i organizacje</Link>
-                                    <Link onClick={toHomeComponent} className="menuHoverElement" to="idHomeContact" smooth={true} duration={1000}>Kontakt</Link>
+                                    <RouterLink to="/" className="menuHoverElement">Start</RouterLink>
+                                    <RouterLink to="/" className="menuHoverElement">O co chodzi?</RouterLink>
+                                    <RouterLink to="/" className="menuHoverElement">O nas</RouterLink>
+                                    <RouterLink to="/" className="menuHoverElement">Fundacja i organizacje</RouterLink>
+                                    <RouterLink to="/" className="menuHoverElement">Kontakt</RouterLink>
                                 </ul>
                             </div>
                         </div>
@@ -96,6 +103,10 @@ const GiveClothes = () => {
 
                 <HomeContact />
                 <HomeFooter />
+                {/* <MyContext.Consumer>
+                    {(MyContext) => <p>{MyContext}</p>}
+
+                </MyContext.Consumer> */}
 
             </section>
 

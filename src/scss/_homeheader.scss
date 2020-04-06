@@ -26,6 +26,11 @@
                     justify-content: flex-end;
                     align-items: center;
 
+                    .userMailStyleLocal {
+                        font-size: 13px;
+                        padding-right: 10px;
+                    }
+
                     button {
                         height: 30px;
                         padding: 5px 5px 5px 5px;
@@ -35,7 +40,7 @@
 
                     button:hover {
                         border: 0.75px solid $orange_color;
-                        cursor: crosshair;
+                        cursor: pointer;
                     }
                 }
 
@@ -56,7 +61,7 @@
 
                         .menuHoverElement:hover {
                             border: 0.75px solid $text_border_color;
-                            cursor: crosshair;
+                            cursor: pointer;
 
                         }
 
@@ -115,7 +120,7 @@
 
                     button:hover {
                         border: 0.75px solid $orange_color; // tutaj do zmiany/wyrzucenia
-                        cursor: crosshair;
+                        cursor: pointer;
                     }
 
                 }

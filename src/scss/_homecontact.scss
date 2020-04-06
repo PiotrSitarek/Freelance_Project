@@ -2,7 +2,7 @@
     height: 690px;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 
     img {
         opacity: 0.1;
@@ -84,7 +84,7 @@
 
         button:hover {
             color: $orange_color;
-            cursor: crosshair;
+            cursor: pointer;
         }
     }
 }
