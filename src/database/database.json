@@ -383,6 +383,51 @@
       "userPassword": "izauka123",
       "userConfirmPassword": "izauka123",
       "id": 18
+    },
+    {
+      "userLogin": "test1@wp.pl",
+      "userStreet": "Szeligowska",
+      "userCity": "Warszawa",
+      "userPostalCode": "12-123",
+      "userPhoneNumber": "123333999",
+      "pickUpDate": "12-12-2020",
+      "pickUpHour": "13:30",
+      "pickUpComment": "Brak",
+      "localizationCity": "Katowice",
+      "peopleToHelp": "samotnym matkom",
+      "typeOfDonation": "książki",
+      "numberOfBags": "2",
+      "id": 19
+    },
+    {
+      "userLogin": "test1@wp.pl",
+      "userStreet": "dd",
+      "userCity": "dd",
+      "userPostalCode": "dd",
+      "userPhoneNumber": "dd",
+      "pickUpDate": "dd",
+      "pickUpHour": "dd",
+      "pickUpComment": "dd",
+      "localizationCity": "Warszawa",
+      "peopleToHelp": "dzieciom,samotnym matkom",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "2",
+      "id": 20
+    },
+    {
+      "userLogin": "test1@wp.pl",
+      "userStreet": "dd",
+      "userCity": "dd",
+      "userPostalCode": "dd",
+      "userPhoneNumber": "dd",
+      "pickUpDate": "dd",
+      "pickUpHour": "dd",
+      "pickUpComment": "dd",
+      "localizationCity": "Poznań",
+      "peopleToHelp": "bezdomnym",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "2",
+      "id": 21
     }
   ]
 }

@@ -1,0 +1,45 @@
+.giveClothesFormConfirm {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .confirmThingsContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 500px;
+    }
+
+    .confirmLocalizationContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 500px;
+
+    }
+
+    .confirmCourierInformation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+
+        .confirmAdressInformation {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .confirmPickUpInformation {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    }
+
+
+}

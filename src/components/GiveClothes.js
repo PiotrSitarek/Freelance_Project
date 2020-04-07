@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import GiveClothesForm from './GiveClothesForm';
 import { UserContext } from './UserContext';
+import GiveClothesFormStep1 from './GiveClothesFormStep1';
 
 
 
@@ -24,6 +25,7 @@ const GiveClothes = () => {
     // }
 
     if (localStorage.getItem("savedName") === null) {
+
 
         history.push("/")
     }
@@ -36,10 +38,10 @@ const GiveClothes = () => {
     //     history.push("/")
     // }
     const { value, setValue } = useContext(UserContext);
-    console.log(value)
+
 
     var savedData = localStorage.getItem("savedName");
-    console.log("Masz na imię: ", savedData);
+
 
 
     return (
@@ -103,10 +105,7 @@ const GiveClothes = () => {
 
                 <HomeContact />
                 <HomeFooter />
-                {/* <MyContext.Consumer>
-                    {(MyContext) => <p>{MyContext}</p>}
 
-                </MyContext.Consumer> */}
 
             </section>
 

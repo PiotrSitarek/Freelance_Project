@@ -14,6 +14,18 @@ const HomeHeader = () => {
 
     const history = useHistory()
 
+    const toGiveClothesTest = () => {   // na czas budowanie formularza uruchomione testowo 
+
+        history.push("/GiveClothes")
+
+    }
+
+
+
+
+    const savedData = localStorage.getItem("savedName");
+
+
     const toLoginPage = () => {
         history.push("/LoginPage")
     }
@@ -34,7 +46,7 @@ const HomeHeader = () => {
             history.push("/GiveClothes")
         }
     }
-    const savedData = localStorage.getItem("savedName");
+
 
 
     return (
@@ -42,7 +54,6 @@ const HomeHeader = () => {
             <section className="allthings">
 
                 <img className="homeHeaderImage" src={image} alt="HomeHeaderImg" />
-
                 <section className="navigationContainer">
                     <div className="navigationFlexContainer">
                         <div className="menuLoginContainer">
@@ -52,6 +63,7 @@ const HomeHeader = () => {
                                     <button onClick={toLogoutPage}>Wyloguj się</button>
                                 ) : (
                                         <>
+
                                             <button onClick={toLoginPage}>Zaloguj się</button>
                                             <button onClick={toRegistrationPage}>Załóż konto</button>
                                         </>
@@ -59,6 +71,7 @@ const HomeHeader = () => {
                             </div>
                             <div className="menuContainer">
                                 <ul>
+                                    <button onClick={toGiveClothesTest}>TO FORM</button>
                                     <li className="menuHoverElement">Start</li>
                                     <Link className="menuHoverElement" to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
                                     <Link className="menuHoverElement" to="idAboutUs" smooth={true} duration={1000}>O nas</Link>
