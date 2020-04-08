@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import image from '../assets/myBackgroundTeddy1.jpg'
 
 const GiveClothesFormStep3 = () => {
     const history = useHistory();
@@ -86,6 +87,9 @@ const GiveClothesFormStep3 = () => {
                         <button onClick={toStep2}>Cofnij</button>
                         <button onClick={toStep4}>Przejdz dalej</button>
                     </form>
+                </div>
+                <div className="teddyContainer">
+                    <img src={image} />
                 </div>
             </section>
 

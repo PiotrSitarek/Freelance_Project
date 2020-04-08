@@ -24,11 +24,11 @@
 .giveClothesFormStep2 {
     height: 31rem;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
     padding-left: 20px;
-    background-image: url(../assets/myBackgroundTeddy.jpg);
+    // background-image: url(../assets/myBackgroundTeddy.jpg);
     position: relative;
 
     .stepNumberPositionClass {
@@ -86,6 +86,14 @@
         }
 
 
+    }
+
+    .teddyContainer {
+        width: 300px;
+
+        img {
+            height: 496px;
+        }
     }
 
 

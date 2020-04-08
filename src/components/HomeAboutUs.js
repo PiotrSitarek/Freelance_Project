@@ -12,15 +12,10 @@ const HomeAboutUs = () => {
                     <img src={decoration} />
                     <p>Nulla tristique, lacus id varius luctus, metus urna posuere velit, et tristique purus magna vel dolor. Praesent sit amet ullamcorper lacus, et rhoncus quam.</p>
                     <img src={signature} />
-
                 </div>
                 <div className="peopleImg">
                     <img src={image} />
                 </div>
-
-
-
-
             </section>
         </>
     );

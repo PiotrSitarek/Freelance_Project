@@ -21,16 +21,12 @@
     }
 }
 
-
-
 .giveClothesFormStep1 {
     height: 31rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     padding: 0 20px 0 20px;
-    background-image: url(../assets/myBackgroundTeddy.jpg);
     position: relative;
 
 
@@ -43,7 +39,6 @@
     .formStep1Container {
         height: 100%;
         width: 600px;
-        // background: salmon;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -74,6 +69,14 @@
                 border: 0.75px solid $orange_color;
                 cursor: pointer;
             }
+        }
+    }
+
+    .teddyContainer {
+        width: 300px;
+
+        img {
+            height: 496px;
         }
     }
 }

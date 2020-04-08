@@ -290,6 +290,51 @@
       "typeOfDonation": "książki",
       "numberOfBags": "1",
       "id": 3
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "3124",
+      "userCity": "12412",
+      "userPostalCode": "32-123",
+      "userPhoneNumber": "123123123",
+      "pickUpDate": "2020-12-12",
+      "pickUpHour": "12:30",
+      "pickUpComment": "brak",
+      "localizationCity": "Poznań",
+      "peopleToHelp": "bezdomnym",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "1",
+      "id": 4
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "123",
+      "userCity": "123",
+      "userPostalCode": "12-123",
+      "userPhoneNumber": "123123123",
+      "pickUpDate": "2020-12-12",
+      "pickUpHour": "09:31",
+      "pickUpComment": "brak",
+      "localizationCity": "Warszawa",
+      "peopleToHelp": "dzieciom",
+      "typeOfDonation": "zabawki",
+      "numberOfBags": "2",
+      "id": 5
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "123",
+      "userCity": "123",
+      "userPostalCode": "12-213",
+      "userPhoneNumber": "123123123",
+      "pickUpDate": "2020-12-12",
+      "pickUpHour": "09:31",
+      "pickUpComment": "bRAK",
+      "localizationCity": "Kraków",
+      "peopleToHelp": "dzieciom,samotnym matkom",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "4",
+      "id": 6
     }
   ]
 }

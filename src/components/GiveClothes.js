@@ -38,7 +38,7 @@ const GiveClothes = () => {
 
     return (
         <>
-            <section className="giveClothesComponent">
+            <section className="giveClothesComponent" id="idGiveClothes">
                 <section className="imgNaviContainer">
                     <img src={image} alt="GiveClothesImg" />
                     <div className="navigationFlexContainer">

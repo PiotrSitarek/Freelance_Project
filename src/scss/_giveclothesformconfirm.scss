@@ -1,17 +1,13 @@
 .giveClothesFormConfirm {
     height: 38rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
     padding: 0 20px 0 20px;
-    background-image: url(../assets/myBackgroundTeddy.jpg);
-
 
     .formConfirmContainer {
         height: 100%;
         width: 600px;
-        // background: salmon;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -87,5 +83,9 @@
         right: 10px;
     }
 
+}
+
+.teddyContainer {
+    width: 300px;
 
 }

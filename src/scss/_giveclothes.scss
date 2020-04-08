@@ -11,10 +11,7 @@
         display: flex;
         justify-content: space-between;
 
-
-
         .userMailStyleLocal {
-
             font-size: 13px;
             padding-right: 10px;
         }
@@ -22,7 +19,6 @@
         #giveClothesStaticButton {
             font-weight: bold;
             border: 0.75px solid $orange_color;
-            ;
         }
 
     }
@@ -30,15 +26,12 @@
     .pageInfoFlex {
         display: flex;
         justify-content: flex-end;
-        // padding-left: 200px;
 
         .pageInfoContainer {
             position: absolute;
             top: 250px;
-            // right: 100px;
             width: 600px;
             height: 350px;
-
 
             .pageInfoText {
                 height: 165px;
@@ -94,16 +87,9 @@
                 }
 
                 p {
-
                     transform: rotate(-45deg);
-
                 }
-
-
-
-
             }
         }
-
     }
 }

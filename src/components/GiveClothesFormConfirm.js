@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import image from '../assets/Icon-1.svg';
 import image2 from '../assets/Icon-4.svg';
+import image3 from '../assets/myBackgroundTeddy1.jpg'
 
 const GiveClothesFormConfirm = () => {
     const history = useHistory();
@@ -102,6 +103,9 @@ const GiveClothesFormConfirm = () => {
                     </div>
                     <button onClick={toStep4}>Wstecz</button>
                     <button onClick={confirmSend}>Potwierdź i wyślij</button>
+                </div>
+                <div className="teddyContainer">
+                    <img src={image3} />
                 </div>
             </section>
 

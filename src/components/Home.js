@@ -13,8 +13,6 @@ import { UserContext } from './UserContext';
 
 
 const Home = () => {
-    // const { value, setValue } = useContext(UserContext); //gdybym chciał tu wykorzystać dane zalogowanego
-
     return (
         <div className="full_layout">
             <HomeHeader />
