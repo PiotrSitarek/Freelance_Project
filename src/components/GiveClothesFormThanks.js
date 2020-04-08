@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import decoration from '../assets/Decoration.svg'
 
 
 const GiveClothesFormThanks = () => {
@@ -17,7 +18,8 @@ const GiveClothesFormThanks = () => {
     return (
         <>
             <section className="thanksContainer">
-                <p>Thanks</p>
+                <h1>Dziękujemy za pomoc!</h1>
+                <img src={decoration} />
             </section>
         </>
     );

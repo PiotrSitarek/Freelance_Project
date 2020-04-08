@@ -17,6 +17,36 @@ const GiveClothesFormStep4 = () => {
     }
     const toConfirm = (event) => {
         event.preventDefault();
+        if (street.length < 3) {
+            alert("Nazwa ulicy powinna mieć przynajmniej 3 znaki")
+            return;
+        }
+        if (city.length < 3) {
+            alert("Nazwa miasta powinna mieć przynajmniej 3 znaki")
+            return;
+        }
+        const codeFormula = /^[0-9][0-9]-[0-9][0-9][0-9]$/;
+        if (!codeFormula.test(postalCode)) {
+            alert("Podaj prawidłowy kod pocztowy. Powienien być w formacie XX-XXX")
+            return;
+        }
+        const phoneNumberFormula = /^[1-9]{1}[0-9]{8}$/;
+        if (!phoneNumberFormula.test(phoneNumber)) {
+            alert("Podaj prawidłowy numer telefonu. Powinien być w formacie XXXXXXXXX")
+            return;
+        }
+        const dateFormula = /^(19|20)[0-9]{2}-[0-1][0-2]-[0-3][0-9]$/;
+        if (!dateFormula.test(date)) {
+            alert("Podaj prawidłową datę. Powinna być w formacie RRRR-MM-DD")
+            return;
+        }
+
+        const hourFormula = /^[0-2][0-9]:[0-5][0-9]$/;
+        if (!hourFormula.test(hour)) {
+            alert("Podaj prawidłową godzinę. Powinna być w formacie GG:MM")
+            return;
+        }
+
         localStorage.setItem("userStreet", street)
         localStorage.setItem("userCity", city)
         localStorage.setItem("userPostalCode", postalCode)
@@ -24,10 +54,6 @@ const GiveClothesFormStep4 = () => {
         localStorage.setItem("pickUpDate", date)
         localStorage.setItem("pickUpHour", hour)
         localStorage.setItem("pickUpComment", comments)
-
-
-
-
         history.push("/GiveClothes/GiveClothesForm/GiveClothesFormConfirm")
     }
     // const uploadData = (event) => {
@@ -40,6 +66,10 @@ const GiveClothesFormStep4 = () => {
     //     localStorage.setItem("pickUpHour", hour)
     //     localStorage.setItem("pickUpComment", comments)
     // }
+
+
+
+
 
 
     return (

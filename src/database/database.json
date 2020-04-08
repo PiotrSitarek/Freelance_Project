@@ -230,18 +230,6 @@
     },
     {
       "type": "Zbiorka",
-      "name": "Za każdy grosz",
-      "mission": "Opieka nad bezdomnymi",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Wielka Orkiestra Świątecznej Pomocy",
-      "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
-      "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
       "name": "Szlachetna paczka",
       "mission": "Pomoc biednym rodzinom",
       "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
@@ -283,181 +271,25 @@
       "how": "Przekazujemy zabawki, ubrania, sprzęt"
     },
     {
-      "userEmail": "drugie@pierwsza.pl",
+      "userEmail": "test@wp.pl",
       "userPassword": "123456",
       "userConfirmPassword": "123456",
       "id": 2
     },
     {
-      "userEmail": "qwerty@wpoasd.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 3
-    },
-    {
-      "userEmail": "123123@onret.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 4
-    },
-    {
-      "userEmail": "1153@onet.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 5
-    },
-    {
-      "userEmail": "1155@onet.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 6
-    },
-    {
-      "userEmail": "1156@oet.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 7
-    },
-    {
-      "userEmail": "polasd@polas.pl",
-      "userPassword": "qwerty",
-      "userConfirmPassword": "qwerty",
-      "id": 8
-    },
-    {
-      "userEmail": "testowe@wp.pl",
-      "userPassword": "testowe",
-      "userConfirmPassword": "testowe",
-      "id": 9
-    },
-    {
-      "userEmail": "test1@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 10
-    },
-    {
-      "userEmail": "poniedzialek@wp.pl",
-      "userPassword": "poniedzialek",
-      "userConfirmPassword": "poniedzialek",
-      "id": 11
-    },
-    {
-      "userEmail": "poniedzialek2@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 12
-    },
-    {
-      "userEmail": "poniedzialek3@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 13
-    },
-    {
-      "userEmail": "123@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 14
-    },
-    {
-      "userEmail": "kuba@pol.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 15
-    },
-    {
-      "userEmail": "1@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 16
-    },
-    {
-      "userEmail": "telefon@wp.pl",
-      "userPassword": "telefon",
-      "userConfirmPassword": "telefon",
-      "id": 17
-    },
-    {
-      "userEmail": "Izabela@ole.pl",
-      "userPassword": "izauka123",
-      "userConfirmPassword": "izauka123",
-      "id": 18
-    },
-    {
-      "userLogin": "test1@wp.pl",
-      "userStreet": "Szeligowska",
-      "userCity": "Warszawa",
-      "userPostalCode": "12-123",
-      "userPhoneNumber": "123333999",
-      "pickUpDate": "12-12-2020",
-      "pickUpHour": "13:30",
+      "userLogin": "test@wp.pl",
+      "userStreet": "Polna ",
+      "userCity": "Wawa",
+      "userPostalCode": "90-210",
+      "userPhoneNumber": "909099333",
+      "pickUpDate": "2020-12-12",
+      "pickUpHour": "12:42",
       "pickUpComment": "Brak",
-      "localizationCity": "Katowice",
-      "peopleToHelp": "samotnym matkom",
-      "typeOfDonation": "książki",
-      "numberOfBags": "2",
-      "id": 19
-    },
-    {
-      "userLogin": "test1@wp.pl",
-      "userStreet": "dd",
-      "userCity": "dd",
-      "userPostalCode": "dd",
-      "userPhoneNumber": "dd",
-      "pickUpDate": "dd",
-      "pickUpHour": "dd",
-      "pickUpComment": "dd",
-      "localizationCity": "Warszawa",
+      "localizationCity": "Poznań",
       "peopleToHelp": "dzieciom,samotnym matkom",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "2",
-      "id": 20
-    },
-    {
-      "userLogin": "test1@wp.pl",
-      "userStreet": "dd",
-      "userCity": "dd",
-      "userPostalCode": "dd",
-      "userPhoneNumber": "dd",
-      "pickUpDate": "dd",
-      "pickUpHour": "dd",
-      "pickUpComment": "dd",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "bezdomnym",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "2",
-      "id": 21
-    },
-    {
-      "userLogin": "null",
-      "userStreet": "dd",
-      "userCity": "dd",
-      "userPostalCode": "dd",
-      "userPhoneNumber": "dd",
-      "pickUpDate": "dd",
-      "pickUpHour": "dd",
-      "pickUpComment": "dd",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "bezdomnym",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "2",
-      "id": 22
-    },
-    {
-      "userLogin": "test1@wp.pl",
-      "userStreet": "pierwsza",
-      "userCity": "pierwsza",
-      "userPostalCode": "pierwsza",
-      "userPhoneNumber": "pierwsza",
-      "pickUpDate": "pierwsza",
-      "pickUpHour": "pierwsza",
-      "pickUpComment": "pierwsza",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "dzieciom,samotnym matkom,bezdomnym,niepełnosprawnym,osobom starszym",
-      "typeOfDonation": "inne",
-      "numberOfBags": "5",
-      "id": 23
+      "typeOfDonation": "książki",
+      "numberOfBags": "1",
+      "id": 3
     }
   ]
 }
