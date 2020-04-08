@@ -335,6 +335,21 @@
       "typeOfDonation": "ubrania do ponownego noszenia",
       "numberOfBags": "4",
       "id": 6
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "Nowa",
+      "userCity": "WWA",
+      "userPostalCode": "90-123",
+      "userPhoneNumber": "123123123",
+      "pickUpDate": "2012-01-10",
+      "pickUpHour": "12:12",
+      "pickUpComment": "Brak",
+      "localizationCity": "Poznań",
+      "peopleToHelp": "dzieciom,samotnym matkom,bezdomnym,niepełnosprawnym,osobom starszym",
+      "typeOfDonation": "książki",
+      "numberOfBags": "5",
+      "id": 7
     }
   ]
 }

@@ -36,17 +36,17 @@ const GiveClothesFormStep4 = () => {
             alert("Podaj prawidłowy numer telefonu. Powinien być w formacie XXXXXXXXX")
             return;
         }
-        const dateFormula = /^(19|20)[0-9]{2}-[0-1][0-2]-[0-3][0-9]$/;
-        if (!dateFormula.test(date)) {
-            alert("Podaj prawidłową datę. Powinna być w formacie RRRR-MM-DD")
-            return;
-        }
+        // const dateFormula = /^(19|20)[0-9]{2}-[0-1][0-2]-[0-3][0-9]$/;
+        // if (!dateFormula.test(date)) {
+        //     alert("Podaj prawidłową datę. Powinna być w formacie RRRR-MM-DD")
+        //     return;
+        // }
 
-        const hourFormula = /^[0-2][0-9]:[0-5][0-9]$/;
-        if (!hourFormula.test(hour)) {
-            alert("Podaj prawidłową godzinę. Powinna być w formacie GG:MM")
-            return;
-        }
+        // const hourFormula = /^[0-2][0-9]:[0-5][0-9]$/;
+        // if (!hourFormula.test(hour)) {
+        //     alert("Podaj prawidłową godzinę. Powinna być w formacie GG:MM")
+        //     return;
+        // }
 
         localStorage.setItem("userStreet", street)
         localStorage.setItem("userCity", city)
@@ -92,8 +92,8 @@ const GiveClothesFormStep4 = () => {
                             <label>Numer telefonu: <input type="text" onChange={event => setPhoneNumber(event.target.value)}></input></label>
                         </div>
                         <div className="dateContainer">
-                            <label>Data: <input type="text" onChange={event => setDate(event.target.value)}></input></label>
-                            <label>Godzina: <input type="text" onChange={event => setHour(event.target.value)}></input></label>
+                            <label>Data: <input type="date" onChange={event => setDate(event.target.value)}></input></label>
+                            <label>Godzina: <input type="time" onChange={event => setHour(event.target.value)}></input></label>
                             <label>Uwagi dla kuriera: <textarea type="text" onChange={event => setComments(event.target.value)}></textarea></label>
                         </div>
                         <button onClick={toStep3}>Cofnij</button>

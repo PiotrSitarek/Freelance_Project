@@ -9,10 +9,6 @@ import { Switch, Link, Route } from 'react-router-dom';
 
 
 const GiveClothesForm = () => {
-
-    // formularz w propsach pobierający dane z każdego komponentu i łączący je w jeden post do JSONa
-
-
     return (
         <>
             <section className="giveClothesFormContainer">
