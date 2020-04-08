@@ -428,6 +428,36 @@
       "typeOfDonation": "ubrania do ponownego noszenia",
       "numberOfBags": "2",
       "id": 21
+    },
+    {
+      "userLogin": "null",
+      "userStreet": "dd",
+      "userCity": "dd",
+      "userPostalCode": "dd",
+      "userPhoneNumber": "dd",
+      "pickUpDate": "dd",
+      "pickUpHour": "dd",
+      "pickUpComment": "dd",
+      "localizationCity": "Poznań",
+      "peopleToHelp": "bezdomnym",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "2",
+      "id": 22
+    },
+    {
+      "userLogin": "test1@wp.pl",
+      "userStreet": "pierwsza",
+      "userCity": "pierwsza",
+      "userPostalCode": "pierwsza",
+      "userPhoneNumber": "pierwsza",
+      "pickUpDate": "pierwsza",
+      "pickUpHour": "pierwsza",
+      "pickUpComment": "pierwsza",
+      "localizationCity": "Poznań",
+      "peopleToHelp": "dzieciom,samotnym matkom,bezdomnym,niepełnosprawnym,osobom starszym",
+      "typeOfDonation": "inne",
+      "numberOfBags": "5",
+      "id": 23
     }
   ]
 }

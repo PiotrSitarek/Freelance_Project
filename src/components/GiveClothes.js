@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
-
 import HomeContact from './HomeContact';
 import image from '../assets/Form-Hero-Image.jpg';
-import GiveClothesImportant from './GiveClothesImportant';
 import HomeFooter from './HomeFooter';
 import decoration from '../assets/Decoration.svg';
 import {
@@ -20,15 +18,12 @@ import GiveClothesFormStep1 from './GiveClothesFormStep1';
 
 const GiveClothes = () => {
     const history = useHistory()
-    // const toLoginPage = () => {
-    //     history.push("/LoginPage")
+
+    // if (localStorage.getItem("savedName") === null) {
+
+
+    //     history.push("/")
     // }
-
-    if (localStorage.getItem("savedName") === null) {
-
-
-        history.push("/")
-    }
 
     const toLogoutPage = () => {
         localStorage.removeItem('savedName');
@@ -39,10 +34,7 @@ const GiveClothes = () => {
     // }
     const { value, setValue } = useContext(UserContext);
 
-
     var savedData = localStorage.getItem("savedName");
-
-
 
     return (
         <>
@@ -66,7 +58,6 @@ const GiveClothes = () => {
                                 </ul>
                             </div>
                         </div>
-
                         <div className="pageInfoFlex">
                             <div className="pageInfoContainer">
                                 <div className="pageInfoText">
@@ -92,23 +83,15 @@ const GiveClothes = () => {
                                         <p className="stepNumbers">4</p>
                                         <p>Zamów kuriera</p>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <GiveClothesImportant />
                 <GiveClothesForm />
-
-
                 <HomeContact />
                 <HomeFooter />
-
-
             </section>
-
         </>
     )
 }

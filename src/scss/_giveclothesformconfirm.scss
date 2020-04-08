@@ -1,44 +1,90 @@
 .giveClothesFormConfirm {
-    height: 500px;
+    height: 38rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 20px 0 20px;
+    background-image: url(../assets/myBackgroundTeddy.jpg);
 
 
-    .confirmThingsContainer {
+    .formConfirmContainer {
+        height: 100%;
+        width: 600px;
+        // background: salmon;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 500px;
-    }
+        position: relative;
 
-    .confirmLocalizationContainer {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 500px;
-
-    }
-
-    .confirmCourierInformation {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 500px;
-
-        .confirmAdressInformation {
-            display: flex;
-            flex-direction: column;
-
+        h2 {
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 20px;
         }
 
-        .confirmPickUpInformation {
+        .confirmThingsContainer {
+            width: 100%;
             display: flex;
-            flex-direction: column;
+            justify-content: flex-start;
 
+            p {
+                padding-top: 40px;
+            }
         }
 
+        .confirmLocalizationContainer {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+            p {
+                padding-top: 40px;
+            }
+        }
+
+        .confirmCourierInformation {
+            width: 100%;
+            display: flex;
+
+            h3 {
+                padding: 10px 0 10px 0;
+                font-weight: bold;
+            }
+
+            .confirmAdressInformation {
+                width: 50%;
+            }
+
+            .confirmPickUpInformation {
+                width: 50%;
+            }
+        }
+    }
+
+    button {
+        height: 50px;
+        width: 100px;
+        background: transparent;
+        border: 1px solid black;
+    }
+
+    button:hover {
+        border: 0.75px solid $orange_color;
+        cursor: pointer;
+    }
+
+    button:first-of-type {
+        position: absolute;
+        bottom: 10px;
+        right: 120px;
+    }
+
+    button:last-of-type {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
     }
 
 

@@ -57,47 +57,52 @@ const GiveClothesFormConfirm = () => {
         })
             .then(response => console.log(response))
             .then(history.push("/GiveClothes/GiveClothesForm/GiveClothesFormThanks"))
-        // .then(localStorage.clear())
-
-
+            .then(
+                localStorage.removeItem("userStreet"),
+                localStorage.removeItem("userCity"),
+                localStorage.removeItem("userPostalCode"),
+                localStorage.removeItem("userPhoneNumber"),
+                localStorage.removeItem("pickUpDate"),
+                localStorage.removeItem("pickUpHour"),
+                localStorage.removeItem("pickUpComment"),
+                localStorage.removeItem("localizationCity"),
+                localStorage.removeItem("peopleToHelp"),
+                localStorage.removeItem("typeOfDonation"),
+                localStorage.removeItem("numberOfBags"),
+            )
     }
-
-
-
-
-
-
-
     return (
         <>
             <section className="giveClothesFormConfirm">
-                <h2>Podsumowanie Twojej darowizny:</h2>
-                <h3>Oddajesz:</h3>
-                <div className="confirmThingsContainer">
-                    <img src={image} />
-                    <p>{numberOfBags} worki, rzeczy: {typeOfDonation}, przekazujesz: {peopleToHelp}</p>
-                </div>
-                <div className="confirmLocalizationContainer">
-                    <img src={image2} />
-                    <p>dla lokalizacji: {localizationCity}</p>
-                </div>
-                <div className="confirmCourierInformation">
-                    <div className="confirmAdressInformation">
-                        <h3>Adres odbioru:</h3>
-                        <p>Ulica: {userStreet}</p>
-                        <p>Miasto: {userCity}</p>
-                        <p>Kod pocztowy: {userPostalCode}</p>
-                        <p>Numer telefonu: {userPhoneNumber}</p>
+                <div className="formConfirmContainer">
+                    <h2>Podsumowanie Twojej darowizny:</h2>
+                    <h3>Oddajesz:</h3>
+                    <div className="confirmThingsContainer">
+                        <img src={image} />
+                        <p>{numberOfBags} worki, rzeczy: {typeOfDonation}, przekazujesz: {peopleToHelp}</p>
                     </div>
-                    <div className="confirmPickUpInformation">
-                        <h3>Termin odbioru:</h3>
-                        <p>Data: {pickUpDate}</p>
-                        <p>Godzina: {pickUpHour}</p>
-                        <p>Uwagi dla kuriera: {pickUpComment}</p>
+                    <div className="confirmLocalizationContainer">
+                        <img src={image2} />
+                        <p>dla lokalizacji: {localizationCity}</p>
                     </div>
+                    <div className="confirmCourierInformation">
+                        <div className="confirmAdressInformation">
+                            <h3>Adres odbioru:</h3>
+                            <p>Ulica: {userStreet}</p>
+                            <p>Miasto: {userCity}</p>
+                            <p>Kod pocztowy: {userPostalCode}</p>
+                            <p>Numer telefonu: {userPhoneNumber}</p>
+                        </div>
+                        <div className="confirmPickUpInformation">
+                            <h3>Termin odbioru:</h3>
+                            <p>Data: {pickUpDate}</p>
+                            <p>Godzina: {pickUpHour}</p>
+                            <p>Uwagi dla kuriera: {pickUpComment}</p>
+                        </div>
+                    </div>
+                    <button onClick={toStep4}>Wstecz</button>
+                    <button onClick={confirmSend}>Potwierdź i wyślij</button>
                 </div>
-                <button onClick={toStep4}>Wstecz</button>
-                <button onClick={confirmSend}>Potwierdź i wyślij</button>
             </section>
 
         </>

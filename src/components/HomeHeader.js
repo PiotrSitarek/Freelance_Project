@@ -14,15 +14,6 @@ const HomeHeader = () => {
 
     const history = useHistory()
 
-    const toGiveClothesTest = () => {   // na czas budowanie formularza uruchomione testowo 
-
-        history.push("/GiveClothes")
-
-    }
-
-
-
-
     const savedData = localStorage.getItem("savedName");
 
 
@@ -71,7 +62,7 @@ const HomeHeader = () => {
                             </div>
                             <div className="menuContainer">
                                 <ul>
-                                    <button onClick={toGiveClothesTest}>TO FORM</button>
+
                                     <li className="menuHoverElement">Start</li>
                                     <Link className="menuHoverElement" to="idFourSteps" smooth={true} duration={1000}>O co chodzi?</Link>
                                     <Link className="menuHoverElement" to="idAboutUs" smooth={true} duration={1000}>O nas</Link>

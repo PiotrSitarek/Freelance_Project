@@ -1,13 +1,93 @@
+.giveClothesImportantStep2 {
+    height: 7rem;
+    width: 100%;
+    background-color: $orange_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    p:first-of-type {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0 0 0.625rem 2rem;
+
+    }
+
+    p:last-of-type {
+        font-size: 1.1rem;
+        padding: 0 0 0 2rem;
+    }
+}
+
+
 .giveClothesFormStep2 {
-    height: 500px;
+    height: 31rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
     padding-left: 20px;
+    background-image: url(../assets/myBackgroundTeddy.jpg);
+    position: relative;
 
-    form {
+    .stepNumberPositionClass {
+        position: absolute;
+        top: 10px;
+        left: 10px
+    }
+
+    .formStep2Container {
+        height: 100%;
+        width: 600px;
+        // background: salmon;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        h2 {
+            padding-bottom: 20px;
+        }
+
+        select {
+            width: 300px;
+        }
+
+
+        // form {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+
+        button {
+            height: 50px;
+            width: 100px;
+            background: transparent;
+            border: 1px solid black;
+        }
+
+        button:hover {
+            border: 0.75px solid $orange_color;
+            cursor: pointer;
+        }
+
+        button:first-of-type {
+            position: absolute;
+            bottom: 10px;
+            right: 120px;
+        }
+
+        button:last-of-type {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+
     }
+
+
+
 }
