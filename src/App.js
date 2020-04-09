@@ -15,14 +15,6 @@ import GiveClothes from './components/GiveClothes';
 import { UserContext } from './components/UserContext';
 // // json-server --watch database.json
 
-import React from 'react';
-import { shallow } from 'enzyme';
-import App from './App';
-
-it('renders without crashing', () => {
-  shallow(<App />);
-});
-
 
 
 function App() {
