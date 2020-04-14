@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll';
 import image from "../assets/Decoration.svg";
 import {
@@ -25,40 +25,74 @@ const RegistrationPage = () => {
         history.push("/")
     }
 
+    const [allDataBase, setAllDataBase] = useState([]);
+    useEffect(() => {
+        fetch(`http://localhost:3000/database/`)
+            .then((response) => response.json())
+            .then((response) => setAllDataBase(response))
+    }, [])
+
+    const [usersBase, setUsersBase] = useState([]);
+    useEffect(() => {
+
+        const filteredAllData = allDataBase.filter(function (element, index, array) {
+            return element.userEmail != null
+        });
+        setUsersBase(filteredAllData);
+        // console.log(filteredAllData);
+
+    }, [allDataBase])
+
+
+
+
+
+
+
+
+
     const registrationForm = document.querySelector('#registrationFormReset');
     const checkLoginData = (event) => {
         event.preventDefault();
-        if (password1.length < 6 || password2.length < 6) {
-            alert(`Hasło jest za krótkie`);
-            return;
+        const account = usersBase.filter(function (element) {
+            return element.userEmail == registeredEmail
 
-        } if (password1 != password2) {
-            alert(`Hasła nie są zgodne`);  // tymczasowo alert
-            return;
-        }
-        if (password1 == password2) {
+        });
 
-            const registrationData = {
-                "userEmail": `${registeredEmail}`,
-                "userPassword": `${password1}`,
-                "userConfirmPassword": `${password2}`
+        if (account.length == 0) {
+
+            if (password1.length < 6 || password2.length < 6) {
+                alert(`Hasło jest za krótkie`);
+                return;
+
+            } if (password1 != password2) {
+                alert(`Hasła nie są zgodne`);
+                return;
             }
-            fetch(`  http://localhost:3000/database/`, {
-                method: 'POST',
-                headers: {
-                    "Content-Type": 'application/json'
-                },
-                body: JSON.stringify(registrationData)
-            })
-                .then(response => console.log(response))
-                .then(alert(`Konto zostało utworzone`))// tymczasowo alert
-                .then(registrationForm.reset())
-                .then(history.push("/LoginPage"))
-                ;
+            if (password1 == password2) {
 
+                const registrationData = {
+                    "userEmail": `${registeredEmail}`,
+                    "userPassword": `${password1}`,
+                    "userConfirmPassword": `${password2}`
+                }
+                fetch(`  http://localhost:3000/database/`, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": 'application/json'
+                    },
+                    body: JSON.stringify(registrationData)
+                })
+                    .then(response => console.log(response))
+                    .then(alert(`Konto zostało utworzone`))
+                    .then(registrationForm.reset())
+                    .then(history.push("/LoginPage"))
+            }
+        }
 
-
-
+        else {
+            alert(`Błąd rejestracji! Podany adres istnieje już w naszej bazie`)
+            return;
         }
     }
     const lockEnter = (event) => {
@@ -66,7 +100,6 @@ const RegistrationPage = () => {
         if (event.keyCode == 13) {
             window.event.returnValue = false;
         }
-
     }
 
 

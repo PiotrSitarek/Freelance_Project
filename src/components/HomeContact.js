@@ -73,24 +73,24 @@ const HomeContact = () => {
                 <div className="contactForm">
                     <p className="contactUs">Skontaktuj się z nami</p>
                     <img src={image} />
-                    {succes && <p className="succesStyle">{succes}</p>}
-                    {allInputsError && <p className="errorStyle">{allInputsError}</p>}
+                    <p className="succesStyle">{succes}</p>
+                    <p className="errorStyle">{allInputsError}</p>
                     <form onSubmit={sendForm} id="contactFormReset">
                         <div className="nameEmailContainer">
                             <div className="nameContainer">
                                 <label>Wpisz swoje imię</label>
                                 <input onChange={event => setUserName(event.target.value)} className="inputStyle" type="text" placeholder="Name..."></input>
-                                {nameError && <p className="errorStyle">{nameError}</p>}
+                                <p className="errorStyle">{nameError}</p>
                             </div>
                             <div className="emailContainer">
                                 <label>Wpisz swój e-mail</label>
-                                <input id="emailInputInject" onChange={event => setUserEmail(event.target.value)} className="inputStyle" type="text" placeholder="e-mail..."></input>
-                                {emailError && <p className="errorStyle">{emailError}</p>}
+                                <input id="emailInputInject" onChange={event => setUserEmail(event.target.value)} className="inputStyle" type="email" placeholder="e-mail..."></input>
+                                <p className="errorStyle">{emailError}</p>
                             </div>
                         </div>
                         <label>Wpisz wiadomość</label><br />
                         <textarea onChange={event => setUserMessage(event.target.value)} placeholder="Wpisz wiadomość..."></textarea>
-                        {messageError && <p className="errorStyle">{messageError}</p>}
+                        <p className="errorStyle">{messageError}</p>
                         <button>Wyślij</button>
                     </form>
                 </div>

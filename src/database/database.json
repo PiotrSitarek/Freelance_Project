@@ -350,6 +350,33 @@
       "typeOfDonation": "książki",
       "numberOfBags": "5",
       "id": 7
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "Rajska",
+      "userCity": "Wwa",
+      "userPostalCode": "01-123",
+      "userPhoneNumber": "505505055",
+      "pickUpDate": "2020-04-23",
+      "pickUpHour": "20:00",
+      "pickUpComment": "nie ma ",
+      "localizationCity": "Warszawa",
+      "peopleToHelp": "dzieciom",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "1",
+      "id": 8
+    },
+    {
+      "userEmail": "piotrek@wp.pl",
+      "userPassword": "123456",
+      "userConfirmPassword": "123456",
+      "id": 9
+    },
+    {
+      "userEmail": "izabela@wp.pl",
+      "userPassword": "123123123",
+      "userConfirmPassword": "123123123",
+      "id": 10
     }
   ]
 }
