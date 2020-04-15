@@ -2,26 +2,25 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap');
 @import './settings/fonts';
 @import './settings/colors';
-@import './app';
-@import './home';
-@import './homeheader';
-@import './homeinfocolumns';
-@import './homefoursteps';
-@import './homeaboutus';
-@import './homecontact';
-@import './homefooter';
-@import './homewehelp';
-@import './loginpage';
-@import './registrationpage';
-@import './logoutpage';
-@import './giveclothes';
-@import './giveclothesform';
-@import './giveclothesformstep1';
-@import './giveclothesformstep2';
-@import './giveclothesformstep3';
-@import './giveclothesformstep4';
-@import './giveclothesformconfirm';
-@import './giveclothesformthanks';
+@import './Home/home';
+@import './Home/homeheader';
+@import './Home/homeinfocolumns';
+@import './Home/homefoursteps';
+@import './Home/homeaboutus';
+@import './Home/homecontact';
+@import './Home/homefooter';
+@import './Home/homewehelp';
+@import './LoginPage/loginpage';
+@import './RegistrationPage/registrationpage';
+@import './LogoutPage/logoutpage';
+@import './GiveClothes/giveclothes';
+@import './GiveClothes/giveclothesform';
+@import './GiveClothes/giveclothesformstep1';
+@import './GiveClothes/giveclothesformstep2';
+@import './GiveClothes/giveclothesformstep3';
+@import './GiveClothes/giveclothesformstep4';
+@import './GiveClothes/giveclothesformconfirm';
+@import './GiveClothes/giveclothesformthanks';
 
 // * {
 //     outline: 1px solid red

@@ -377,6 +377,36 @@
       "userPassword": "123123123",
       "userConfirmPassword": "123123123",
       "id": 10
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "asd",
+      "userCity": "asd",
+      "userPostalCode": "12-123",
+      "userPhoneNumber": "123123123",
+      "pickUpDate": "2020-04-24",
+      "pickUpHour": "01:33",
+      "pickUpComment": "qdasd",
+      "localizationCity": "Kraków",
+      "peopleToHelp": "dzieciom,samotnym matkom",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "1",
+      "id": 11
+    },
+    {
+      "userLogin": "test@wp.pl",
+      "userStreet": "asd",
+      "userCity": "asd",
+      "userPostalCode": "12-123",
+      "userPhoneNumber": "123123123",
+      "pickUpDate": "2020-04-14",
+      "pickUpHour": "11:11",
+      "pickUpComment": "asd",
+      "localizationCity": "Poznań",
+      "peopleToHelp": "dzieciom,samotnym matkom,bezdomnym,niepełnosprawnym,osobom starszym",
+      "typeOfDonation": "ubrania do ponownego noszenia",
+      "numberOfBags": "4",
+      "id": 12
     }
   ]
 }

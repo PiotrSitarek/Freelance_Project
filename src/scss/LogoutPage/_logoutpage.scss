@@ -1,0 +1,32 @@
+.logoutDataContainer {
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
+
+    p {
+        padding-top: 40px;
+        font-size: 20px;
+    }
+
+    img {
+        padding: 70px 0 30px 0;
+    }
+
+    button {
+        height: 30px;
+        width: 110px;
+        background-color: transparent;
+        border: none;
+        padding: 5px 5px 5px 5px;
+    }
+
+    button:hover {
+        border: 0.75px solid $form_text_color;
+    }
+}
