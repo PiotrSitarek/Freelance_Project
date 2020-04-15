@@ -1,12 +1,5 @@
 {
-  "database": [
-    {
-      "userEmail": "123123@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 1
-    },
-    {
+  "database": [{
       "type": "Fundacja",
       "name": "Polsat",
       "mission": "Pomoc dzieciom z domów dziecka",
@@ -62,12 +55,6 @@
     },
     {
       "type": "Zbiorka",
-      "name": "Szlachetna paczka",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
       "name": "Wielka Orkiestra Świątecznej Pomocy",
       "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
       "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
@@ -92,30 +79,6 @@
     },
     {
       "type": "Zbiorka",
-      "name": "Za każdy grosz",
-      "mission": "Opieka nad bezdomnymi ",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Szlachetna paczka",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Wielka Orkiestra Świątecznej Pomocy",
-      "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
-      "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Złotówka ",
-      "mission": "Opieka nad małoletnimi",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
-    },
-    {
-      "type": "Zbiorka",
       "name": "Wielka Orkiestra Świątecznej Pomocy",
       "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
       "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
@@ -128,27 +91,9 @@
     },
     {
       "type": "Zbiorka",
-      "name": "Zbieramy od zimy do lata",
-      "mission": "Opieka",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
-    },
-    {
-      "type": "Zbiorka",
       "name": "Wielka Orkiestra Świątecznej Pomocy",
       "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
       "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Wielka Orkiestra Świątecznej Pomocy",
-      "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
-      "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Zbieramy co się da",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
     },
     {
       "type": "Zbiorka",
@@ -164,12 +109,6 @@
     },
     {
       "type": "Zbiorka",
-      "name": "Szlachetna paczka",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
       "name": "Wielka Orkiestra Świątecznej Pomocy",
       "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
       "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
@@ -188,63 +127,9 @@
     },
     {
       "type": "Zbiorka",
-      "name": "Wielka Orkiestra Świątecznej Pomocy",
-      "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
-      "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Za każdy grosz",
-      "mission": "Opieka nad bezdomnymi",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
-    },
-    {
-      "type": "Zbiorka",
       "name": "Szlachetna paczka",
       "mission": "Pomoc biednym rodzinom",
       "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Wielka Orkiestra Świątecznej Pomocy",
-      "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
-      "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Za każdy grosz",
-      "mission": "Opieka nad bezdomnymi",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Wielka Orkiestra Świątecznej Pomocy",
-      "mission": "Pomoc, w szerokim tego słowa znaczeniu. Przy każdym finale zbieramy na inne, konkretne cele",
-      "how": "Zakup sprzętu medycznego, finansowanie remontów oddziałów szpitalnych ..."
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Szlachetna paczka",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Szlachetna paczka",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Szlachetna paczka",
-      "mission": "Pomoc biednym rodzinom",
-      "how": "Przekazujemy paczki z jedzeniem, zabawkami, ubraniami"
-    },
-    {
-      "type": "Zbiorka",
-      "name": "Za każdy grosz",
-      "mission": "Opieka nad bezdomnymi",
-      "how": "Przekazujemy ubrania, artykuły spożywcze"
     },
     {
       "type": "Zbiorka",
@@ -265,148 +150,10 @@
       "how": "Przekazujemy artykuły spożywcze, ubrania, AGD"
     },
     {
-      "type": "Fundacja",
-      "name": "Polsat",
-      "mission": "Pomoc dzieciom z domów dziecka",
-      "how": "Przekazujemy zabawki, ubrania, sprzęt"
-    },
-    {
       "userEmail": "test@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 2
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "Polna ",
-      "userCity": "Wawa",
-      "userPostalCode": "90-210",
-      "userPhoneNumber": "909099333",
-      "pickUpDate": "2020-12-12",
-      "pickUpHour": "12:42",
-      "pickUpComment": "Brak",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "dzieciom,samotnym matkom",
-      "typeOfDonation": "książki",
-      "numberOfBags": "1",
-      "id": 3
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "3124",
-      "userCity": "12412",
-      "userPostalCode": "32-123",
-      "userPhoneNumber": "123123123",
-      "pickUpDate": "2020-12-12",
-      "pickUpHour": "12:30",
-      "pickUpComment": "brak",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "bezdomnym",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "1",
-      "id": 4
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "123",
-      "userCity": "123",
-      "userPostalCode": "12-123",
-      "userPhoneNumber": "123123123",
-      "pickUpDate": "2020-12-12",
-      "pickUpHour": "09:31",
-      "pickUpComment": "brak",
-      "localizationCity": "Warszawa",
-      "peopleToHelp": "dzieciom",
-      "typeOfDonation": "zabawki",
-      "numberOfBags": "2",
-      "id": 5
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "123",
-      "userCity": "123",
-      "userPostalCode": "12-213",
-      "userPhoneNumber": "123123123",
-      "pickUpDate": "2020-12-12",
-      "pickUpHour": "09:31",
-      "pickUpComment": "bRAK",
-      "localizationCity": "Kraków",
-      "peopleToHelp": "dzieciom,samotnym matkom",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "4",
-      "id": 6
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "Nowa",
-      "userCity": "WWA",
-      "userPostalCode": "90-123",
-      "userPhoneNumber": "123123123",
-      "pickUpDate": "2012-01-10",
-      "pickUpHour": "12:12",
-      "pickUpComment": "Brak",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "dzieciom,samotnym matkom,bezdomnym,niepełnosprawnym,osobom starszym",
-      "typeOfDonation": "książki",
-      "numberOfBags": "5",
-      "id": 7
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "Rajska",
-      "userCity": "Wwa",
-      "userPostalCode": "01-123",
-      "userPhoneNumber": "505505055",
-      "pickUpDate": "2020-04-23",
-      "pickUpHour": "20:00",
-      "pickUpComment": "nie ma ",
-      "localizationCity": "Warszawa",
-      "peopleToHelp": "dzieciom",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "1",
-      "id": 8
-    },
-    {
-      "userEmail": "piotrek@wp.pl",
-      "userPassword": "123456",
-      "userConfirmPassword": "123456",
-      "id": 9
-    },
-    {
-      "userEmail": "izabela@wp.pl",
-      "userPassword": "123123123",
-      "userConfirmPassword": "123123123",
-      "id": 10
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "asd",
-      "userCity": "asd",
-      "userPostalCode": "12-123",
-      "userPhoneNumber": "123123123",
-      "pickUpDate": "2020-04-24",
-      "pickUpHour": "01:33",
-      "pickUpComment": "qdasd",
-      "localizationCity": "Kraków",
-      "peopleToHelp": "dzieciom,samotnym matkom",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "1",
-      "id": 11
-    },
-    {
-      "userLogin": "test@wp.pl",
-      "userStreet": "asd",
-      "userCity": "asd",
-      "userPostalCode": "12-123",
-      "userPhoneNumber": "123123123",
-      "pickUpDate": "2020-04-14",
-      "pickUpHour": "11:11",
-      "pickUpComment": "asd",
-      "localizationCity": "Poznań",
-      "peopleToHelp": "dzieciom,samotnym matkom,bezdomnym,niepełnosprawnym,osobom starszym",
-      "typeOfDonation": "ubrania do ponownego noszenia",
-      "numberOfBags": "4",
-      "id": 12
+      "userPassword": "qwerty",
+      "userConfirmPassword": "qwerty",
+      "id": 1
     }
   ]
 }
