@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import firebase from '../../firebase/wehelpfirebase';
 import decoration from '../../assets/Decoration.svg';
-
 
 const HomeWeHelp = () => {
 
@@ -9,12 +9,26 @@ const HomeWeHelp = () => {
     const [postPerPage] = useState(3);
     const [listToPagination, setListToPagination] = useState([]);
 
-    useEffect(() => {
-        fetch(`http://localhost:3000/database/`)
-            .then((response) => response.json())
-            .then((response) => setPosts(response))
+    // useEffect(() => {
+    //     fetch(`http://localhost:3000/database/`)
+    //         .then((response) => response.json())
+    //         .then((response) => setPosts(response))
+    // }, []);  
 
-    }, []);
+    useEffect(() => {
+        firebase.firestore().collection('organizations').get()
+            .then(snapshot => {
+                snapshot.docs.forEach(doc => {
+                    renderOrganizations(doc);
+                })
+            })
+    }, [])
+
+    let arr = [];
+    const renderOrganizations = (doc) => {
+        arr.push(doc.data());
+        setPosts(arr)
+    }
 
     const searchbyFundation = () => {
         const filtered = posts.filter(function (element, index, arr) {
