@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import image from "../../assets/Decoration.svg";
 import { Link as RouterLink, useHistory } from "react-router-dom";
+import firebase from '../../firebase/firebase';
 
 const RegistrationPage = () => {
     const history = useHistory();
@@ -15,20 +16,36 @@ const RegistrationPage = () => {
         history.push("/RegistrationPage")
     }
 
-    const [allDataBase, setAllDataBase] = useState([]);
-    useEffect(() => {
-        fetch(`http://localhost:3000/database/`)
-            .then((response) => response.json())
-            .then((response) => setAllDataBase(response))
-    }, [])
+    // const [allDataBase, setAllDataBase] = useState([]);
+    // useEffect(() => {
+    //     fetch(`http://localhost:3000/database/`)
+    //         .then((response) => response.json())
+    //         .then((response) => setAllDataBase(response))
+    // }, [])
+
+    // const [usersBase, setUsersBase] = useState([]);
+    // useEffect(() => {
+    //     const filteredAllData = allDataBase.filter(function (element, index, array) {
+    //         return element.userEmail != null
+    //     });
+    //     setUsersBase(filteredAllData);
+    // }, [allDataBase]);
 
     const [usersBase, setUsersBase] = useState([]);
     useEffect(() => {
-        const filteredAllData = allDataBase.filter(function (element, index, array) {
-            return element.userEmail != null
-        });
-        setUsersBase(filteredAllData);
-    }, [allDataBase]);
+        firebase.firestore().collection('users').get()
+            .then(snapshot => {
+                snapshot.docs.forEach(doc => {
+                    renderUsers(doc);
+                })
+            })
+    }, [])
+
+    let arr = [];
+    const renderUsers = (doc) => {
+        arr.push(doc.data());
+        setUsersBase(arr)
+    }
 
     const registrationForm = document.querySelector('#registrationFormReset');
     const checkLoginData = (event) => {
@@ -47,27 +64,39 @@ const RegistrationPage = () => {
             }
             if (password1 === password2) {
 
-                const registrationData = {
-                    "userEmail": `${registeredEmail}`,
-                    "userPassword": `${password1}`,
-                    "userConfirmPassword": `${password2}`
-                }
-                fetch(`  http://localhost:3000/database/`, {
-                    method: 'POST',
-                    headers: {
-                        "Content-Type": 'application/json'
-                    },
-                    body: JSON.stringify(registrationData)
+                firebase.firestore().collection('users').add({
+                    "userEmail": registeredEmail,
+                    "userPassword": password1
+                }).then(function () {
+                    alert(`Konto zostało utworzone`);
+                    registrationForm.reset();
+                    history.push("/LoginPage");
                 })
-                    .then((response) => response.json())
-                    .then(response => {
-                        alert(`Konto zostało utworzone`);
-                        registrationForm.reset();
-                        history.push("/LoginPage");
-                    })
-                    .catch(error => {
+                    .catch(function (error) {
                         alert(`Problem z rejestracją, spróbuj później`);
                     });
+
+                // const registrationData = {
+                //     "userEmail": `${registeredEmail}`,
+                //     "userPassword": `${password1}`,
+                //     "userConfirmPassword": `${password2}`
+                // }
+                // fetch(`  http://localhost:3000/database/`, {
+                //     method: 'POST',
+                //     headers: {
+                //         "Content-Type": 'application/json'
+                //     },
+                //     body: JSON.stringify(registrationData)
+                // })
+                //     .then((response) => response.json())
+                //     .then(response => {
+                //         alert(`Konto zostało utworzone`);
+                //         registrationForm.reset();
+                //         history.push("/LoginPage");
+                //     })
+                //     .catch(error => {
+                //         alert(`Problem z rejestracją, spróbuj później`);
+                //     });
             }
         }
 

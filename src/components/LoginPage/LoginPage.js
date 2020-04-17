@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import image from "../../assets/Decoration.svg";
 import { Link as RouterLink, useHistory } from "react-router-dom";
+import firebase from '../../firebase/firebase';
+
 
 const LoginPage = () => {
 
     const [loginMail, setLoginMail] = useState('');
     const [loginInfo] = useState('');
     const [loginPassword, setLoginPassword] = useState('');
-    const [allDataBase, setAllDataBase] = useState([]);
+    // const [allDataBase, setAllDataBase] = useState([]);
     const [usersBase, setUsersBase] = useState([]);
     const history = useHistory();
     const toLoginPage = () => {
@@ -17,18 +19,35 @@ const LoginPage = () => {
         history.push("/RegistrationPage")
     }
 
-    useEffect(() => {
-        fetch(`http://localhost:3000/database/`)
-            .then((response) => response.json())
-            .then((response) => setAllDataBase(response))
-    }, []);
+    // useEffect(() => {
+    //     fetch(`http://localhost:3000/database/`)
+    //         .then((response) => response.json())
+    //         .then((response) => setAllDataBase(response))
+
+    // }, []);
+    // console.log(usersBase)
+    // useEffect(() => {
+    //     const filteredAllData = allDataBase.filter(function (element, index, array) {
+    //         return element.id >= 0
+    //     });
+    //     setUsersBase(filteredAllData);
+    // }, [allDataBase]);
+
 
     useEffect(() => {
-        const filteredAllData = allDataBase.filter(function (element, index, array) {
-            return element.id >= 0
-        });
-        setUsersBase(filteredAllData);
-    }, [allDataBase]);
+        firebase.firestore().collection('users').get()
+            .then(snapshot => {
+                snapshot.docs.forEach(doc => {
+                    renderUsers(doc);
+                })
+            })
+    }, [])
+
+    let arr = [];
+    const renderUsers = (doc) => {
+        arr.push(doc.data());
+        setUsersBase(arr)
+    }
 
     const logIntoSystem = (event) => {
         event.preventDefault();

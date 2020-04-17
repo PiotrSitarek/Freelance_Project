@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import firebase from '../../firebase/wehelpfirebase';
+import firebase from '../../firebase/firebase';
 import decoration from '../../assets/Decoration.svg';
 
 const HomeWeHelp = () => {
