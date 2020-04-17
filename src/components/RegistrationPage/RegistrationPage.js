@@ -59,10 +59,15 @@ const RegistrationPage = () => {
                     },
                     body: JSON.stringify(registrationData)
                 })
-                    .then(response => console.log(response))
-                    .then(alert(`Konto zostało utworzone`))
-                    .then(registrationForm.reset())
-                    .then(history.push("/LoginPage"))
+                    .then((response) => response.json())
+                    .then(response => {
+                        alert(`Konto zostało utworzone`);
+                        registrationForm.reset();
+                        history.push("/LoginPage");
+                    })
+                    .catch(error => {
+                        alert(`Problem z rejestracją, spróbuj później`);
+                    });
             }
         }
 
