@@ -9,6 +9,11 @@ const HomeHeader = () => {
     const history = useHistory();
     const savedData = localStorage.getItem("savedName");
 
+    const toAdminPanel = () => {
+
+        history.push("/AdminPanel")
+    }
+
     const toLoginPage = () => {
         history.push("/LoginPage")
     }
@@ -43,6 +48,7 @@ const HomeHeader = () => {
                                         <button onClick={toRegistrationPage}>Załóż konto</button>
                                     </>
                                 )}
+                            {savedData === `admin@wp.pl` ? (<button onClick={toAdminPanel}>Admin Panel</button>) : (null)}
                         </div>
                         <div className="menuContainer">
                             <ul>

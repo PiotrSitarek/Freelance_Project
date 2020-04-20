@@ -6,6 +6,7 @@ import RegistrationPage from './components/RegistrationPage/RegistrationPage';
 import LogoutPage from './components/LogoutPage/LogoutPage';
 import { HashRouter, Switch, Route } from "react-router-dom";
 import GiveClothes from './components/GiveClothes/GiveClothes';
+import AdminPanel from './components/AdminPanel/AdminPanel'
 // // json-server --watch database.json
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/LogoutPage' component={LogoutPage} />
         <Route path='/LoginPage' component={LoginPage} />
         <Route path='/GiveClothes' component={GiveClothes} />
+        <Route path='/AdminPanel' component={AdminPanel} />
         <Route component={PageNotFound} />
       </Switch>
     </HashRouter>

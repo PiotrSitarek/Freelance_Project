@@ -1,0 +1,90 @@
+.adminPanelContainer {
+    background: skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    h1 {
+        font-size: 20px;
+        padding: 25px 0 25px 0;
+    }
+
+    .toHomePageButton {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: transparent;
+        border: none;
+    }
+
+    .toHomePageButton:hover {
+        border: 0.75px solid $orange_color;
+        cursor: pointer;
+    }
+
+    .userListContainer {
+        width: 100%;
+        background-color: lightblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        p {
+            padding: 25px 0 25px 0;
+        }
+
+        ul>li {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                margin-left: 20px;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .organizationsListContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+        margin-top: 25px;
+
+        .addOrganizationContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                padding: 0 0 25px 0;
+            }
+        }
+
+        p {
+            padding: 25px 0 25px 0;
+        }
+
+        ul>li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid black;
+
+            button {
+                margin-left: 20px;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
