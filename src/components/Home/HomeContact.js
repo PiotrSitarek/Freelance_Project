@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import image from "../../assets/Decoration.svg";
 import clothesimage from '../../assets/Background-Contact-Form.jpg';
+import firebase from '../../firebase/firebase';
 
 const HomeContact = () => {
 
@@ -36,28 +37,50 @@ const HomeContact = () => {
             return;
         }
 
-        const formData = {
+        // const formData = {
+        //     "name": `${userName}`,
+        //     "email": `${userEmail}`,
+        //     "message": `${userMessage}`
+        // }
+        // const formReset = document.querySelector('#contactFormReset')
+        // console.log(formReset)
+
+        // fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact/`, {
+        //     method: 'POST',
+        //     headers: {
+        //         "Content-Type": 'application/json'
+        //     },
+        //     body: JSON.stringify(formData)
+        // })
+        // .then(response => console.log(response))
+        // .then(setSucces('Wiadomość wysłana'))
+        // .then(setNameError(''))
+        // .then(setEmailError(''))
+        // .then(setMessageError(''))
+        // .then(setAllInputsError(''))
+        // .then(formReset.reset())
+
+        const formReset = document.querySelector('#contactFormReset')
+
+        firebase.firestore().collection('formmessage').add({
+
             "name": `${userName}`,
             "email": `${userEmail}`,
             "message": `${userMessage}`
-        }
-        const formReset = document.querySelector('#contactFormReset')
-        console.log(formReset)
 
-        fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact/`, {
-            method: 'POST',
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            body: JSON.stringify(formData)
         })
-            .then(response => console.log(response))
-            .then(setSucces('Wiadomość wysłana'))
-            .then(setNameError(''))
-            .then(setEmailError(''))
-            .then(setMessageError(''))
-            .then(setAllInputsError(''))
-            .then(formReset.reset())
+            .then(function () {
+                setSucces('Wiadomość wysłana')
+                setNameError('')
+                setEmailError('')
+                setMessageError('')
+                setAllInputsError('')
+                formReset.reset()
+            })
+
+            .catch(function (error) {
+                alert(`Problem formularzem, spróbuj później`);
+            });
 
     }
     return (

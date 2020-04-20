@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import image from '../../assets/Icon-1.svg';
 import image2 from '../../assets/Icon-4.svg';
 import image3 from '../../assets/myBackgroundTeddy1.jpg';
+import firebase from '../../firebase/firebase';
 
 const GiveClothesFormConfirm = () => {
     const history = useHistory();
@@ -25,7 +26,47 @@ const GiveClothesFormConfirm = () => {
 
     const confirmSend = () => {
 
-        const donationInfo = {
+        // const donationInfo = {
+        // "userLogin": `${userLogin}`,
+        // "userStreet": `${userStreet}`,
+        // "userCity": `${userCity}`,
+        // "userPostalCode": `${userPostalCode}`,
+        // "userPhoneNumber": `${userPhoneNumber}`,
+        // "pickUpDate": `${pickUpDate}`,
+        // "pickUpHour": `${pickUpHour}`,
+        // "pickUpComment": `${pickUpComment}`,
+        // "localizationCity": `${localizationCity}`,
+        // "peopleToHelp": `${peopleToHelp}`,
+        // "typeOfDonation": `${typeOfDonation}`,
+        // "numberOfBags": `${numberOfBags}`
+        // }
+
+        // fetch(`  http://localhost:3000/database/`, {
+        //     method: 'POST',
+        //     headers: {
+        //         "Content-Type": 'application/json'
+        //     },
+        //     body: JSON.stringify(donationInfo)
+        // })
+        //     .then(response => console.log(response))
+        //     .then(history.push("/GiveClothes/GiveClothesForm/GiveClothesFormThanks"))
+        //     .then(
+        //         localStorage.removeItem("userStreet"),
+        //         localStorage.removeItem("userCity"),
+        //         localStorage.removeItem("userPostalCode"),
+        //         localStorage.removeItem("userPhoneNumber"),
+        //         localStorage.removeItem("pickUpDate"),
+        //         localStorage.removeItem("pickUpHour"),
+        //         localStorage.removeItem("pickUpComment"),
+        //         localStorage.removeItem("localizationCity"),
+        //         localStorage.removeItem("peopleToHelp"),
+        //         localStorage.removeItem("typeOfDonation"),
+        //         localStorage.removeItem("numberOfBags"),
+        //     );
+
+
+        firebase.firestore().collection('helpform').add({
+
             "userLogin": `${userLogin}`,
             "userStreet": `${userStreet}`,
             "userCity": `${userCity}`,
@@ -38,17 +79,8 @@ const GiveClothesFormConfirm = () => {
             "peopleToHelp": `${peopleToHelp}`,
             "typeOfDonation": `${typeOfDonation}`,
             "numberOfBags": `${numberOfBags}`
-        }
 
-        fetch(`  http://localhost:3000/database/`, {
-            method: 'POST',
-            headers: {
-                "Content-Type": 'application/json'
-            },
-            body: JSON.stringify(donationInfo)
-        })
-            .then(response => console.log(response))
-            .then(history.push("/GiveClothes/GiveClothesForm/GiveClothesFormThanks"))
+        }).then(response => console.log(response))
             .then(
                 localStorage.removeItem("userStreet"),
                 localStorage.removeItem("userCity"),
@@ -61,7 +93,9 @@ const GiveClothesFormConfirm = () => {
                 localStorage.removeItem("peopleToHelp"),
                 localStorage.removeItem("typeOfDonation"),
                 localStorage.removeItem("numberOfBags"),
-            );
+            )
+            .then(history.push("/GiveClothes/GiveClothesForm/GiveClothesFormThanks"));
+
     }
     return (
         <section className="giveClothesFormConfirm">
