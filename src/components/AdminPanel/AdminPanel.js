@@ -4,6 +4,10 @@ import { useHistory } from "react-router-dom";
 
 const AdminPanel = () => {
     const history = useHistory()
+
+    if (localStorage.getItem("savedName") != "admin@wp.pl") {
+        history.push("/")
+    }
     const [users, setUsers] = useState([]);
     const [organizations, setOrganizations] = useState([]);
 
@@ -47,10 +51,8 @@ const AdminPanel = () => {
             .catch(function (error) {
                 console.error("Błąd usuwania ");
             });
-
     }
     const [organizationType, setOrganizationType] = useState('');
-
 
     const catchSelectValue = () => {
         const selectedOptions = document.querySelectorAll('.selectOptions');
@@ -59,7 +61,6 @@ const AdminPanel = () => {
                 setOrganizationType(element.value) // set organization trzeba wywywalić
             }
         });
-
     }
     const [organizationName, setOrganizationName] = useState('');
     const [organizationMission, setOrganizationMission] = useState('');
@@ -75,7 +76,6 @@ const AdminPanel = () => {
             "mission": organizationMission,
             "how": organizationHow
 
-
         }).then(function () {
             console.log(`Organizacja została dodana`);
             getOrganizations();
@@ -83,6 +83,47 @@ const AdminPanel = () => {
         })
             .catch(function (error) {
                 console.log(`Problem z dodaniem organizacji, spróbuj później`);
+            });
+    }
+    const [formMessages, setFormMessages] = useState([]);
+
+    useEffect(() => {
+        firebase.firestore().collection('formmessage').get()
+            .then(snapshot => setFormMessages(snapshot.docs))
+    }, [])
+    const getFormMessages = () => {
+        firebase.firestore().collection('formmessage').get()
+            .then(snapshot => setFormMessages(snapshot.docs))
+    }
+    const deleteFormMessage = (event) => {
+        firebase.firestore().collection('formmessage').doc(`${event}`).delete()
+            .then(function () {
+                console.log("Wiadomość usunięta")
+                getFormMessages();
+            })
+            .catch(function (error) {
+                console.error("Błąd usuwania ");
+            });
+    }
+
+    const [helpform, setHelpForm] = useState([]);
+
+    useEffect(() => {
+        firebase.firestore().collection('helpform').get()
+            .then(snapshot => setHelpForm(snapshot.docs))
+    }, [])
+    const getHelpForm = () => {
+        firebase.firestore().collection('helpform').get()
+            .then(snapshot => setHelpForm(snapshot.docs))
+    }
+    const deleteHelpForm = (event) => {
+        firebase.firestore().collection('helpform').doc(`${event}`).delete()
+            .then(function () {
+                console.log("Formularz usunięty")
+                getHelpForm();
+            })
+            .catch(function (error) {
+                console.error("Błąd usuwania ");
             });
     }
 
@@ -126,7 +167,32 @@ const AdminPanel = () => {
                 <ul>{organizations.map(element =>
                     <li key={element.id}>Typ:{element.data().type}<br />  Nazwa:{element.data().name}<br /> Misja: {element.data().mission}<button onClick={() => deleteOrganizations(element.id)}>Usuń</button></li>)}
                 </ul>
+            </div>
+            <div className="formMessageContainer">
+                <p>Wiadomości z sekcji kontaktowej</p>
+                <ul>{formMessages.map(element =>
+                    <li key={element.id}>Imię: {element.data().name}<br /> Email: {element.data().email} <br /> Wiadomość: {element.data().message}<button onClick={() => deleteFormMessage(element.id)}>Usuń</button></li>)}
+                </ul>
+            </div>
+            <div className="helpFormContainer">
+                <p>Przesłane formularze</p>
+                <ul>{helpform.map(element =>
+                    <li key={element.id}>
+                        Login pomagającego: {element.data().userLogin}<br />
+                        Miasto: {element.data().userCity} <br />
+                        Kod pocztowy: {element.data().userPostalCode}<br />
+                        Ulica: {element.data().userStreet}<br />
+                        Numer telefonu: {element.data().userPhoneNumber} <br />
+                        Data odebrania worków: {element.data().pickUpDate}<br />
+                        Godzina odebrania worków: {element.data().pickUpHour} <br />
+                        Uwagi dla kuriera: {element.data().pickUpComment} <br />
+                        Miasto do którego wyślemy worki: {element.data().localizationCity}<br />
+                        Liczba worków: {element.data().numberOfBags} <br />
+                        Pomoc trafi do: {element.data().peopleToHelp}<br />
+                        Typ: {element.data().typeOfDonation} <br />
 
+                        <button onClick={() => deleteHelpForm(element.id)}>Usuń</button></li>)}
+                </ul>
             </div>
 
 
