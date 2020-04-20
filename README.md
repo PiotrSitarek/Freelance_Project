@@ -3,8 +3,6 @@ This aplication is in progress, creating by Piotr Sitarek.
 It is my second application in ReactJS technology. 
 Project is available at https://fervent-hypatia-777808.netlify.com/#/ 
 
-
-
 ## Technologies
 * HTML5
 * Sass
@@ -18,10 +16,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-
-### `json-server --watch database.json` 
-
-in database terminal 
 
 ### `npm start`
 
