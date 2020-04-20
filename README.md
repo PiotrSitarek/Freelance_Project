@@ -32,6 +32,8 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ## Screenshots
-![Desktop Screenshot](./screen_images/admin_page.png)
+![App Screen](./src/screen_images/home_page.png)
+![Pagination Screen](./src/screen_images/pagination_page.png)
+![Admin Panel Screen](./src/screen_images/admin_page.png)
 
 
