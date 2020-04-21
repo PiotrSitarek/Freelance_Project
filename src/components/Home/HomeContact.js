@@ -104,9 +104,11 @@ const HomeContact = () => {
                             <p className="errorStyle">{emailError}</p>
                         </div>
                     </div>
+              
                     <label>Wpisz wiadomość</label><br />
                     <textarea onChange={event => setUserMessage(event.target.value)} placeholder="Wpisz wiadomość..."></textarea>
                     <p className="errorStyle">{messageError}</p>
+                  
                     <button>Wyślij</button>
                 </form>
             </div>

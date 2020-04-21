@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const AdminPanel = () => {
     const history = useHistory()
 
-    if (localStorage.getItem("savedName") != "admin@wp.pl") {
+    if (localStorage.getItem("savedName") !== "admin@wp.pl") {
         history.push("/")
     }
     const [users, setUsers] = useState([]);
