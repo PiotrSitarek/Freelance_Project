@@ -1,7 +1,7 @@
 # Info
 This aplication is in progress, creating by Piotr Sitarek. 
 It is my second application in ReactJS technology. 
-Project is available at https://fervent-hypatia-777808.netlify.com/#/ 
+Project is available at https://piotrsitarek.pl/Freelance_project/
 
 ## Technologies
 * HTML5
