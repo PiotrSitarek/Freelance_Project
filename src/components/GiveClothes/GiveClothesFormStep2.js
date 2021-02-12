@@ -48,7 +48,7 @@ const GiveClothesFormStep2 = () => {
                         </select>
                     </form>
                     <button onClick={toStep1}>Cofnij</button>
-                    <button onClick={toStep3}>Przejdz dalej</button>
+                    <button onClick={toStep3}>Przejdź dalej</button>
                 </div>
                 <div className="teddyContainer">
                     <img src={image} alt="teddyImage" />

@@ -21,7 +21,7 @@ const GiveClothes = () => {
     return (
         <section className="giveClothesComponent" id="idGiveClothes">
             <section className="imgNaviContainer">
-                <img src={image} alt="GiveClothesImg" />
+                <img src={image} alt="GiveClothesImg" className="giveClothesMainImage" />
                 <div className="navigationFlexContainer">
                     <div className="menuLoginContainer">
                         <div className="loginContainer">

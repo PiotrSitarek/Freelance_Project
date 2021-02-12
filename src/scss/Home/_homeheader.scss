@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-evenly;
 
-    .homeHeaderImage {
-        margin-left: -200px;
-    }
+    // .homeHeaderImage {
+    //     margin-left: -200px;
+    // }
 
     .navigationContainer {
         width: 100%;
@@ -121,5 +121,29 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .homeHeaderImage {
+        margin-left: -600px;
+    }
+}
+
+@media (min-width: 900px) and (max-width:1200px) {
+    .homeHeaderImage {
+        margin-left: -550px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1300px) {
+    .homeHeaderImage {
+        margin-left: -400px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .homeHeaderImage {
+        margin-left: -300px;
     }
 }

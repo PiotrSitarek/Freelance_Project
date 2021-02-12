@@ -9,12 +9,6 @@ const HomeWeHelp = () => {
     const [postPerPage] = useState(3);
     const [listToPagination, setListToPagination] = useState([]);
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:3000/database/`)
-    //         .then((response) => response.json())
-    //         .then((response) => setPosts(response))
-    // }, []);  
-
     useEffect(() => {
         firebase.firestore().collection('organizations').get()
             .then(snapshot => {

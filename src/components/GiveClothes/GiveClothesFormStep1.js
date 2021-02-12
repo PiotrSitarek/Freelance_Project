@@ -52,7 +52,7 @@ const GiveClothesFormStep1 = () => {
                     <h2>Zaznacz co chcesz oddać:</h2>
                     <form onChange={stepOneValue}>
                         <label>
-                            <input type="radio" name="togive" value="ubrania do ponownego noszenia" className="radioCheckboxes" />Ubrania do ponownego noszenia
+                            <input type="radio" name="togive" value="ubrania do ponownego noszenia" className="radioCheckboxes" /> Ubrania do ponownego noszenia
                     </label>
                         <label>
                             <input type="radio" name="togive" value="ubrania do wyrzucenia" className="radioCheckboxes" /> Ubrania do wyrzucenia
@@ -66,7 +66,7 @@ const GiveClothesFormStep1 = () => {
                         <label>
                             <input type="radio" name="togive" value="inne" className="radioCheckboxes" /> Inne
                     </label>
-                        <button onClick={toStep2}>Przejdz dalej </button>
+                        <button onClick={toStep2}>Przejdź dalej </button>
                     </form>
                     <button onClick={storageClear}>StorageClear</button>
                 </div>

@@ -77,7 +77,7 @@ const GiveClothesFormStep3 = () => {
                             <input type="checkbox" name="peopleToHelp" value="osobom starszym" className="peopleCheckboxes" /> osobom starszym
                     </label>
                         <button onClick={toStep2}>Cofnij</button>
-                        <button onClick={toStep4}>Przejdz dalej</button>
+                        <button onClick={toStep4}>Przejdź dalej</button>
                     </form>
                 </div>
                 <div className="teddyContainer">

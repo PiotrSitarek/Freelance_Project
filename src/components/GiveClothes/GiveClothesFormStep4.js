@@ -69,7 +69,7 @@ const GiveClothesFormStep4 = () => {
                         </div>
                         <button onClick={toStep3}>Cofnij</button>
                         {/* <button>sumbit</button> */}
-                        <button onClick={toConfirm} >Przejdz dalej</button>
+                        <button onClick={toConfirm} >Przejdź dalej</button>
 
                     </form>
                 </div>
